@@ -1,12 +1,11 @@
-Grading at 09/02/2022:03:14:04.055015
-For commit ID 12920e17443ca35db706bc76af1385649f2c3580
-Grading at Thu Sep  1 11:14:03 PM EDT 2022
+Grading at 09/02/2022:03:23:47.644174
+For commit ID 4f18e5c63db04ed81b921d2ad16124c90ea8c6fb
+Grading at Thu Sep  1 11:23:47 PM EDT 2022
 Reading your quiz answers from answers.txt
-You got 3 questions incorrect.
+You got 2 questions incorrect.
 You might want to review these concepts:
 ------------
 Switch/case and loops
-The introduction to Chapter 2
 What is an assignment
 ------------
 
