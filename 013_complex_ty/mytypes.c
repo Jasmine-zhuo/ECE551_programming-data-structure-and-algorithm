@@ -11,4 +11,4 @@ enum _animal_t {
   DOG,
   HORSE,
 };
-typedef enum animal_t _animal_t;
+typedef enum _animal_t animal_t;
