@@ -7,7 +7,7 @@ bool run_check(unsigned x, unsigned y, unsigned expected_ans) {
   return (expected_ans != power(x, y));
 }
 
-void main() {
+int main(void) {
   if (run_check(0, 0, 1)) {
     exit(EXIT_FAILURE);
   }
@@ -32,5 +32,6 @@ void main() {
   if (run_check(-2, 3, -8)) {
     exit(EXIT_FAILURE);
   }
+  printf("success!");
   exit(EXIT_SUCCESS);
 }
