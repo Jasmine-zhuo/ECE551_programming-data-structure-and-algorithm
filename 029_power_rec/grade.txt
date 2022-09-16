@@ -1,8 +1,47 @@
-Grading at 09/16/2022:17:34:36.721765
-For commit ID 680c2418c984766ae8f046603f484a6772b68f35
-Grading at Fri Sep 16 01:34:36 PM EDT 2022
+Grading at 09/16/2022:18:48:13.600821
+For commit ID eb9ff9ffbd7cf459ea84cbdf38ecd5d0eb07318b
+Grading at Fri Sep 16 02:48:12 PM EDT 2022
 Attempting to compile power.c
 Attempting to compile power.o with our main
-The code did not compile! (did you leave your own main in there??)
+Checking for unsigned power (unsigned x, unsigned y)
+Found on line 4, column 1 
+Checking for no iteration (do, while, for)
+Checking that power is recursive
+0^0 was Correct
+0^1 was Correct
+0^2 was Correct
+0^6 was Correct
+0^8 was Correct
+0^11 was Correct
+1^0 was Correct
+1^1 was Correct
+1^2 was Correct
+1^6 was Correct
+1^8 was Correct
+1^11 was Correct
+4^0 was Correct
+4^1 was Correct
+4^2 was Correct
+4^6 was Correct
+4^8 was Correct
+4^11 was Correct
+5^0 was Correct
+5^1 was Correct
+5^2 was Correct
+5^6 was Correct
+5^8 was Correct
+5^11 was Correct
+9^0 was Correct
+9^1 was Correct
+9^2 was Correct
+9^6 was Correct
+9^8 was Correct
+9^11 was Correct
+12^0 was Correct
+12^1 was Correct
+12^2 was Correct
+12^6 was Correct
+12^8 was Correct
+12^11 was Correct
 
-Overall Grade: F
+Overall Grade: A
