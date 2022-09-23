@@ -42,6 +42,6 @@ int main() {
     if (check(test, 8, 5))
       exit(EXIT_FAILURE);
   }
-
+  printf("success");
   exit(EXIT_SUCCESS);
 }
