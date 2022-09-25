@@ -9,37 +9,49 @@ bool check(int * array, size_t n, int ans_exp) {
 
 int main() {
   {
-      // int test[] = {};
-      // if (check(test, 0, 0))
-      // exit(EXIT_FAILURE);
-  } {
-    int test[] = {1};
-    if (check(test, 1, 0))
+    int test[] = {};
+    if (check(test, 0, 0))
+
       exit(EXIT_FAILURE);
   }
   {
-    int test[] = {1, 2};
-    if (check(test, 2, 2))
+    int test1[] = {1};
+    if (check(test1, 1, 0))
       exit(EXIT_FAILURE);
   }
   {
-    int test[] = {1, 2, 3};
-    if (check(test, 3, 3))
+    int test2[] = {1, 2};
+    if (check(test2, 2, 2))
       exit(EXIT_FAILURE);
   }
   {
-    int test[] = {1, 2, 1, 3, 5};
-    if (check(test, 5, 3))
+    int test3[] = {1, 2, 3};
+    if (check(test3, 3, 3))
       exit(EXIT_FAILURE);
   }
   {
-    int test[] = {-1, 0, 1};
-    if (check(test, 3, 3))
+    int test4[] = {1, 2, 1, 3, 5};
+    if (check(test4, 5, 3))
       exit(EXIT_FAILURE);
   }
   {
-    int test[] = {1, 2, 1, 4, 6, 7, 8, -2};
-    if (check(test, 8, 5))
+    int test5[] = {-1, 0, 1};
+    if (check(test5, 3, 3))
+      exit(EXIT_FAILURE);
+  }
+  {
+    int test6[] = {1, 2, 1, 4, 6, 7, 8, -2};
+    if (check(test6, 8, 5))
+      exit(EXIT_FAILURE);
+  }
+  {
+    int test7[] = {9, 8, 7, 6, 5, 4};
+    if (check(test7, 4, 0))
+      exit(EXIT_FAILURE);
+  }
+  {
+    int test8[] = {6, 3, 5, 4, 6, 4, 7, 5};
+    if (check(test8, 8, 2))
       exit(EXIT_FAILURE);
   }
   printf("success");
