@@ -9,13 +9,14 @@ bool check(int * array, size_t n, size_t ans_exp) {
 
 int main() {
   {
-      // int test[] = {};
-      //if (check(test, 0, 0))
+    int test[] = {1};
+    if (check(test, 0, 0))
 
-      //exit(EXIT_FAILURE);
-  } {
+      exit(EXIT_FAILURE);
+  }
+  {
     int test1[] = {1};
-    if (check(test1, 1, 0))
+    if (check(test1, 1, 1))
       exit(EXIT_FAILURE);
   }
   {
