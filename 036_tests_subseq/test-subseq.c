@@ -3,18 +3,17 @@
 #include <stdlib.h>
 size_t maxSeq(int * array, size_t n);
 
-bool check(int * array, size_t n, int ans_exp) {
+bool check(int * array, size_t n, size_t ans_exp) {
   return (ans_exp != (maxSeq(array, n)));
 }
 
 int main() {
   {
-    int test[] = {};
-    if (check(test, 0, 0))
+      // int test[] = {};
+      //if (check(test, 0, 0))
 
-      exit(EXIT_FAILURE);
-  }
-  {
+      //exit(EXIT_FAILURE);
+  } {
     int test1[] = {1};
     if (check(test1, 1, 0))
       exit(EXIT_FAILURE);
