@@ -8,8 +8,7 @@ bool check(int * array, size_t n, size_t ans_exp) {
 }
 
 int main() {
-  int test[] = {1};
-  if (check(test, 0, 0))
+  if (check(NULL, 0, 0))
 
     exit(EXIT_FAILURE);
 
@@ -44,7 +43,7 @@ int main() {
   }
 
   int test7[] = {9, 8, 7, 6, 5, 4};
-  if (check(test7, 6, 0)) {
+  if (check(test7, 6, 1)) {
     exit(EXIT_FAILURE);
   }
 
@@ -52,7 +51,19 @@ int main() {
   if (check(test8, 8, 2)) {
     exit(EXIT_FAILURE);
   }
+  int test9[] = {8, -7, 6, -5};
+  if (check(test9, 4, 2)) {
+    exit(EXIT_FAILURE);
+  }
+  int test10[] = {3, 2, 1, 0, 1, 2, 3};
+  if (check(test10, 7, 4)) {
+    exit(EXIT_FAILURE);
+  }
+  int test11[] = {1, 1, 2};
+  if (check(test11, 3, 2)) {
+    exit(EXIT_FAILURE);
+  }
 
-  printf("success");
-  return (EXIT_SUCCESS);
+  //  printf("success");
+  return EXIT_SUCCESS;
 }
