@@ -1,28 +1,19 @@
-Grading at 09/25/2022:21:18:50.970133
-For commit ID c1f2d64487725539d5cd7ec4bcde5dfb2b0dc403
-Grading at Sun Sep 25 05:18:50 PM EDT 2022
+Grading at 09/25/2022:23:41:59.509491
+For commit ID 5ba6ed1ae6cfd20aeb6d4af7c3bb9b66e9a1b299
+Grading at Sun Sep 25 07:41:59 PM EDT 2022
 Attempting to compile maxSeq.c 
-maxSeq.c: In function ‘maxSeq’:
-maxSeq.c:6:21: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
-    6 |   for (int i = 0, i < n, i++) {
-      |                     ^
-maxSeq.c:14:3: error: expected expression before ‘return’
-   14 |   return count;
-      |   ^~~~~~
-maxSeq.c:15:1: error: expected expression before ‘}’ token
-   15 | }
-      | ^
-maxSeq.c:15:1: error: expected expression before ‘}’ token
-maxSeq.c:6:12: error: unused variable ‘i’ [-Werror=unused-variable]
-    6 |   for (int i = 0, i < n, i++) {
-      |            ^
-maxSeq.c:5:10: error: unused variable ‘count’ [-Werror=unused-variable]
-    5 |   size_t count = 0;
-      |          ^~~~~
-maxSeq.c:15:1: error: control reaches end of non-void function [-Werror=return-type]
-   15 | }
-      | ^
-cc1: all warnings being treated as errors
-The code did not compile!
+Linking your object file with our test main
+#################################################
+testcase2:
+array size:0 was Correct
+#################################################
+testcase3:
+array size:1 was Correct
+#################################################
+testcase4:
+array size:100 was Incorrect
+#################################################
+testcase5:
+array size:5000 was Incorrect
 
-Overall Grade: F
+Overall Grade: D
