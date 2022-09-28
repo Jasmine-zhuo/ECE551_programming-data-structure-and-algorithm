@@ -4,7 +4,7 @@
 
 void reverse(char * str) {
   //WRITE ME!
-  if (strlen(str) == 0) {
+  if (str == NULL) {
     return;
   }
   int start = 0;
