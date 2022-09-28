@@ -17,8 +17,8 @@ void numToBits(uint32_t * nums, int nNums, int * bits, int nBits) {
   }
   else
     for (int i = 0; i < nNums; i++) {
-      for (int j = 31; j >= 0; j--) {
-        bits[32 * i + 31 - j] = getNthBit(*(nums + i), j);
+      for (int j = 0; j < 32; j++) {
+        bits[32 * i + j] = getNthBit(*(nums + i), 31 - j);
       }
     }
 }
