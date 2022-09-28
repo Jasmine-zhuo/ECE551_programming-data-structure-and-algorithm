@@ -4,6 +4,9 @@
 
 void reverse(char * str) {
   //WRITE ME!
+  if (strlen(str) == 0) {
+    return;
+  }
   int start = 0;
   int end = strlen(str) - 1;
   char temp;
