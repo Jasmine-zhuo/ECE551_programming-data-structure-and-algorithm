@@ -1,7 +1,6 @@
 #include <ctype.h>
 #include <stdio.h>
-
-#include <stdlib>
+#include <stdlib.h>
 
 int find_max(int * array) {
   int index = 0;
@@ -42,11 +41,11 @@ void find_key(FILE * f) {
 int main(int argc, char ** argv) {
   if (argc != 2) {
     fprintf(stderr, "Usage:encrypt key inputFileName\n");
-    return EXIX_FAILURE;
+    return EXIT_FAILURE;
   }
   FILE * f = fopen(argv[1], "r");
   if (f == NULL) {
-    perror(Could not open file);
+    perror("Could not open file");
     return EXIT_FAILURE;
   }
   find_key(f);
