@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void rotate_matrix(File * f) {
+void rotate_matrix(FILE * f) {
   char line[12] = {0};
   char rotate_matrix[10][10] = {{0}};
 
@@ -58,7 +58,7 @@ int main(int argc, char ** argv) {
   }
   FILE * f = fopen(argv[1], "r");
   if (f == NULL) {
-    fprinnf(stderr, "Could not open file");
+    fprintf(stderr, "Could not open file");
     return EXIT_FAILURE;
   }
   rotate_matrix(f);
