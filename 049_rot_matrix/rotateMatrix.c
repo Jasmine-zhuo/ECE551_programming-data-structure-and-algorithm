@@ -13,8 +13,8 @@ void rotate_matrix(FILE * f) {
         fprintf(stderr, "There is a line with more than ten characters\n");
         exit(EXIT_FAILURE);
       }
-      if (line[10] == '\n') {
-        fprintf(stderr, "There is a line withh incorrect number of characters\n");
+      if (line[10] != '\n') {
+        fprintf(stderr, "There is a line with incorrect number of characters\n");
         exit(EXIT_FAILURE);
       }
       if (line[0] == '\n') {
