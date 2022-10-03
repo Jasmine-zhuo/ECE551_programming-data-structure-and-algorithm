@@ -1,19 +1,23 @@
-Grading at 10/03/2022:04:02:31.935402
-For commit ID 6de924c1083d224844d1f266e96d13b47b6c9aef
-Grading at Mon Oct  3 12:02:31 AM EDT 2022
+Grading at 10/03/2022:04:13:16.374696
+For commit ID ecd97dcce3c6b5a71cd0e4e4bb8ee3bed04b09dc
+Grading at Mon Oct  3 12:13:12 AM EDT 2022
 Attempting to compile rotateMatrix.c
-rotateMatrix.c:6:20: error: unknown type name ‘File’
-    6 | void rotate_matrix(File * f) {
-      |                    ^~~~
-rotateMatrix.c: In function ‘main’:
-rotateMatrix.c:61:5: error: implicit declaration of function ‘fprinnf’; did you mean ‘fprintf’? [-Werror=implicit-function-declaration]
-   61 |     fprinnf(stderr, "Could not open file");
-      |     ^~~~~~~
-      |     fprintf
-rotateMatrix.c:64:3: error: implicit declaration of function ‘rotate_matrix’ [-Werror=implicit-function-declaration]
-   64 |   rotate_matrix(f);
-      |   ^~~~~~~~~~~~~
-cc1: all warnings being treated as errors
-The code did not compile!
+testcase1 passed
+#################################################
+testcase2:
+testcase2 passed
+#################################################
+testcase3:
+testcase3 passed
+#################################################
+testcase4:
+testcase4 passed
+#################################################
+testcase5:
+testcase5 passed
+#################################################
+testcase6:
+Your file did not match the expected ouput
+testcase6 failed, your output did not match with the answer
 
-Overall Grade: F
+Overall Grade: C
