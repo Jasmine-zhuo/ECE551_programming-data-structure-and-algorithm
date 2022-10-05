@@ -1,0 +1,22 @@
+Grading at 10/05/2022:01:22:24.309885
+For commit ID 48378265b441b9825f34aa4070d96084c19a7142
+Grading at Tue Oct  4 09:22:22 PM EDT 2022
+
+Compiling 
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
+Running your test cases
++-----------------------------------------------------------------------+
+Test case printCountries invalid.csv
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printDailyMax 
+Your program successfully indicated a failure case
+
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
+
+Overall Grade: NO GRADE YET
