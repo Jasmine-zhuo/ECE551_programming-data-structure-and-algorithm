@@ -30,6 +30,10 @@ country_t parseLine(char * line) {
     fprintf(stderr, "Invalid input.\n");
     exit(EXIT_FAILURE);
   }
+  if (line == NULL) {
+    fprintf(stderr, "Invalid input.\n");
+    exit(EXIT_FAILURE);
+  }
   ans.population = num;
   return ans;
 }
