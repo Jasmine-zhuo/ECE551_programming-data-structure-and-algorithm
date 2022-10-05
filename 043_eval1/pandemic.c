@@ -17,7 +17,13 @@ country_t parseLine(char * line) {
   char * res;
   char * ptr;
   size_t size;
+  char * check = NULL;
   res = strchr(line, ',');
+  check = strchr(res + 1, ',');
+  if (check != NULL) {
+    printf("Invalid input");
+    exit(EXIT_FAILURE);
+  }
   num = strtol(res + 1, &ptr, 10);
   size = strlen(line) - strlen(res);
   memcpy(ans.name, line, size);
@@ -40,6 +46,10 @@ country_t parseLine(char * line) {
 
 void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
   //WRITE ME
+  if (n_days < 7) {
+    printf("There is not enough input data.");
+    exit(EXIT_SUCCESS);
+  }
   const int day = 7;
   for (size_t i = 0; i < (n_days - 6); i++) {
     *(avg + i) =
