@@ -61,6 +61,14 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
 
 void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) {
   //WRITE ME
+  if (n_days <= 0) {
+    printf("Invalid input days");
+    exit(EXIT_FAILURE);
+  }
+  if (pop <= 0) {
+    printf("Invalid input population");
+    exit(EXIT_FAILURE);
+  }
   double sum = 0;
   for (size_t i = 0; i < n_days; i++) {
     for (size_t j = 0; j < i; j++) {
