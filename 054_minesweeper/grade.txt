@@ -1,0 +1,18 @@
+Grading at 10/07/2022:15:54:35.676782
+For commit ID 1020e429c7bc79de1def1d6af38744c0fc8791f7
+Grading at Fri Oct  7 11:54:32 AM EDT 2022
+Attempting to compile minesweeper.c
+#################################################
+testcase1:
+valgrind reported memory errors
+#################################################
+testcase2:
+valgrind reported memory errors
+#################################################
+testcase3:
+valgrind reported memory errors
+#################################################
+testcase4:
+valgrind reported memory errors
+
+Overall Grade: F
