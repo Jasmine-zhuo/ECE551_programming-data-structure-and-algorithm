@@ -6,11 +6,11 @@
 #include <string.h>
 
 kvpair_t * fillpair(const char * line, char delimiter) {
-  const char * p = line;
-  const char * x = line;
-  p = strchr(p, delimiter);
-  x = strchr(line, '\n');  //the last two characters are \n,\0
-  if ((p = NULL) || (x == NULL)) {
+  const char * p = strchr(line, delimiter);
+  const char * x = strchr(line, '\n');
+  //p = strchr(p, delimiter);
+  //x = strchr(line,  '\n');  //the last two characters are \n,\0
+  if ((p == NULL) || (x == NULL)) {
     fprintf(stderr, "Line contains no delimiter\n");
     exit(EXIT_FAILURE);
   }
