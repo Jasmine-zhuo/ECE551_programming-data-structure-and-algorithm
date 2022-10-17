@@ -1,6 +1,7 @@
 #ifndef __KV_H__
 #define __KV_H__
 #include <stddef.h>
+#include <stdlib.h>
 struct _kvpair_t {
   //DEFINE ME!
   char * key;
