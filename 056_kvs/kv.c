@@ -11,11 +11,12 @@ kvpair_t * fillpair(const char * line, char delimiter) {
   p = strchr(p, delimiter);
   x = strchr(line, '\n');  //the last two characters are \n,\0
   if ((p = NULL) || (x == NULL)) {
-    fprintf(stderr, "Line contains no delimiter");
+    fprintf(stderr, "Line contains no delimiter\n");
     exit(EXIT_FAILURE);
   }
 
   kvpair_t * newpair = malloc(sizeof(*newpair));
+
   size_t key_len = p - line + 1;
   newpair->key = malloc(key_len * sizeof(*newpair->key));
   strncpy(newpair->key, line, key_len - 1);
@@ -24,7 +25,7 @@ kvpair_t * fillpair(const char * line, char delimiter) {
   size_t value_len = x - p;
   newpair->value = malloc(value_len * sizeof(*newpair->value));
   strncpy(newpair->value, p + 1, value_len - 1);
-  newpair->value[value_len] = '\0';
+  newpair->value[value_len - 1] = '\0';
   return newpair;
 }
 
