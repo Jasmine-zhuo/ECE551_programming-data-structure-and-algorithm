@@ -1,28 +1,244 @@
-Grading at 10/05/2022:17:33:52.197250
+Grading at 10/17/2022:01:51:17.227167
 For commit ID 462d27d715cd3c43e5568516d9a6b23e2efacb6b
-Grading at Wed Oct  5 01:33:49 PM EDT 2022
+Grading at Sun Oct 16 09:50:58 PM EDT 2022
 
-Compiling 
+Checking that your code compiles
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
-Running your test cases
+
+=========================================================================
+Step 1
+
 +-----------------------------------------------------------------------+
-Test case printCountries invalid.csv
-Invalid inputYour program did not indicate a failure case
-+-----------------------------------------------------------------------+
-Test case printDailyMax population.csv
+Test case 1
+Valgrind reported memory errors
 Your program successfully indicated a failure case
+                                                         [2.4/3]
 +-----------------------------------------------------------------------+
-Test case printCountries population.csv
-Your file matched the expected output
+Test case 2
+Your program did not indicate a failure case
+                                                         [0/3]
 +-----------------------------------------------------------------------+
-Test case printDailyMax population.csv daily_small.csv
+Test case 3
+Your program did not indicate a failure case
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 4
+Your program did not indicate a failure case
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 5
 Your file matched the expected output
+                                                         [10/10]
++-----------------------------------------------------------------------+
+Test case 6
+Your file matched the expected output
+                                                         [3/3]
++-----------------------------------------------------------------------+
+Test case 7
+Your file matched the expected output
+                                                         [3/3]
++-----------------------------------------------------------------------+
+Test case 8
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 9
+Your file matched the expected output
+                                                         [1/1]
++-----------------------------------------------------------------------+
+Test case 10
+Line_10_did_not_match
+Your file did not match the expected ouput
+                                                         [0/1]
 
-You have FAILED one or more of your test cases
-Keep debugging
+Step 1 total                                             [21.4/30]
 
-Overall Grade: NO GRADE YET
+=========================================================================
+Step 2
+
++-----------------------------------------------------------------------+
+Test case 11
+Line_2_did_not_match
+Line_4_did_not_match
+Line_6_did_not_match
+Line_8_did_not_match
+Line_10_did_not_match
+Line_12_did_not_match
+Line_14_did_not_match
+Line_16_did_not_match
+Line_18_did_not_match
+Your file did not match the expected ouput
+                                                         [0/5]
++-----------------------------------------------------------------------+
+Test case 12
+Line_4_did_not_match
+Line_6_did_not_match
+Line_8_did_not_match
+Line_14_did_not_match
+Line_18_did_not_match
+Your file did not match the expected ouput
+                                                         [0/5]
++-----------------------------------------------------------------------+
+Test case 13
+Line_1_did_not_match
+Your file did not match the expected ouput
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 14
+Line_4_did_not_match
+Your file did not match the expected ouput
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 15
+Line_2_did_not_match
+Line_4_did_not_match
+Line_6_did_not_match
+Line_8_did_not_match
+Line_10_did_not_match
+Line_12_did_not_match
+Line_14_did_not_match
+Line_16_did_not_match
+Line_18_did_not_match
+Your file did not match the expected ouput
+                                                         [0/3]
++-----------------------------------------------------------------------+
+Test case 16
+Line_2_did_not_match
+Line_4_did_not_match
+Line_6_did_not_match
+Line_8_did_not_match
+Line_10_did_not_match
+Line_12_did_not_match
+Line_14_did_not_match
+Line_16_did_not_match
+Line_18_did_not_match
+Your file did not match the expected ouput
+                                                         [0/3]
+
+Step 2 total                                             [0/20]
+
+=========================================================================
+Step 3
+
++-----------------------------------------------------------------------+
+Test case 17
+Line_2_did_not_match
+Line_4_did_not_match
+Line_6_did_not_match
+Line_8_did_not_match
+Line_10_did_not_match
+Line_12_did_not_match
+Line_14_did_not_match
+Line_16_did_not_match
+Line_18_did_not_match
+Your file did not match the expected ouput
+                                                         [0/5]
++-----------------------------------------------------------------------+
+Test case 18
+Line_4_did_not_match
+Line_6_did_not_match
+Line_14_did_not_match
+Line_18_did_not_match
+Your file did not match the expected ouput
+                                                         [0/5]
++-----------------------------------------------------------------------+
+Test case 19
+Line_1_did_not_match
+Your file did not match the expected ouput
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 20
+Line_4_did_not_match
+Line_6_did_not_match
+Your file did not match the expected ouput
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 21
+Line_2_did_not_match
+Line_4_did_not_match
+Line_6_did_not_match
+Line_8_did_not_match
+Line_10_did_not_match
+Line_12_did_not_match
+Line_14_did_not_match
+Line_16_did_not_match
+Line_18_did_not_match
+Your file did not match the expected ouput
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 22
+Line_2_did_not_match
+Line_4_did_not_match
+Line_6_did_not_match
+Line_8_did_not_match
+Line_10_did_not_match
+Line_12_did_not_match
+Line_14_did_not_match
+Line_16_did_not_match
+Line_18_did_not_match
+Your file did not match the expected ouput
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 23
+Line_2_did_not_match
+Line_4_did_not_match
+Line_6_did_not_match
+Line_8_did_not_match
+Line_10_did_not_match
+Line_12_did_not_match
+Line_14_did_not_match
+Line_16_did_not_match
+Line_18_did_not_match
+Your file did not match the expected ouput
+                                                         [0/2]
+
+Step 3 total                                             [0/20]
+
+=========================================================================
+Step 4
+
++-----------------------------------------------------------------------+
+Test case 24
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 25
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 26
+Your file matched the expected output
+                                                         [3/3]
++-----------------------------------------------------------------------+
+Test case 27
+Your file matched the expected output
+                                                         [3/3]
++-----------------------------------------------------------------------+
+Test case 28
+Your file matched the expected output
+                                                         [4/4]
+
+Step 4 total                                             [20/20]
+
+=========================================================================
+Code quality
+
+Abstration:    Good
+Naming:        OK
+Formatting:    Excellent
+Documentation: Poor
+Comments from your grader:
+Excellent in function formatting. You also did a good job on abstraction. You 
+can try to use more informative variable names to make your code more readable, 
+such as avoiding "ans", "res". You can also write some comments to your 
+function and some critical logic to make your audiences understand them easily. 
+
+Quality total                                            [7.8/10]
+
+=========================================================================
+
+Overall Grade: 49
