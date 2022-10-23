@@ -11,12 +11,12 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   counts_t * counts = createCounts();
   char * line = NULL;
   size_t size = 0;
-  size_t len = 0;
+  ssize_t len = 0;
 
   FILE * f = fopen(filename, "r");
   while ((len = getline(&line, &size, f)) >= 0) {
     char * p = strchr(line, '\n');
-    len = p - line;
+    size_t len = p - line;
     char * value = malloc(sizeof(*value) * (len + 1));
     strncpy(value, line, p - line);
     value[len] = '\0';
