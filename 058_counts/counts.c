@@ -42,7 +42,7 @@ void printCounts(counts_t * c, FILE * outFile) {
     fprintf(outFile, "%s : %zd\n", c->count_array[i].string, c->count_array[i].count);
   }
   if (c->unknown != 0) {
-    fprintf(outFile, "unknown : %zd\n", c->unknown);
+    fprintf(outFile, "<unknown> : %zd\n", c->unknown);
   }
   // if (fclose(outFile) != 0) {
   // fprintf(stderr, "Cannot close file");
