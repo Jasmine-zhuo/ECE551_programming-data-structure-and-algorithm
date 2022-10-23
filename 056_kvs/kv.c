@@ -55,7 +55,9 @@ kvarray_t * readKVs(const char * fname) {
   kvarray_t * kvarray = malloc(sizeof(*kvarray));
   kvarray->pairdata = NULL;
   kvarray->numPairs = 0;
-  while ((len = getline(&line, &sz, f)) >= 0) {
+  while (
+      (len = getline(&line, &sz, f)) >=
+      0) {  //*line points to a malloced buffer where the line will be written.so the first char
     addpair(line, kvarray);
   }
   free(line);

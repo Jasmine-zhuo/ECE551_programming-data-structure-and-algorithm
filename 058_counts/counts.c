@@ -29,8 +29,9 @@ void addCount(counts_t * c, const char * name) {
   if (j == c->numCounts) {
     c->count_array =
         realloc(c->count_array, sizeof(*(c->count_array)) * (c->numCounts + 1));
-    (c->count_array[c->numCounts]).string = strdup(name);
-    (c->count_array[c->numCounts]).count = 1;
+    (c->count_array[c->numCounts]).string =
+        strdup(name);  //name is const, cannot assign to another pointer, so strdup, copy.
+    (c->count_array[c->numCounts]).count = 1;  //add the first string
     c->numCounts++;
   }
 }

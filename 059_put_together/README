@@ -4,8 +4,7 @@ We are now ready for the last piece:
 And then to put all the pieces together.  Before you start, notice that
 we have placed symlinks (short for "symbolic links") to the files you worked on
 in the previous problems.  Symbolic links basically mean that when you open
-the file, it will open the file it links to (so opening counts.c will open
-../058_counts/counts.c ).  
+the file, it will open the file it links to (so opening counts.c will open../058_counts/counts.c ).  
 
 For this problem, you will start by writing the function:
 
