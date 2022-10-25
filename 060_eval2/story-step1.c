@@ -73,7 +73,7 @@ int main(int argc, char ** argv) {
     }
 
     if (flag == -1) {
-      printf("Missing closing uderscore!\n");
+      fprintf(stderr, "Missing closing uderscore!\n");
       free(line);
       fclose(f);
       exit(EXIT_FAILURE);
