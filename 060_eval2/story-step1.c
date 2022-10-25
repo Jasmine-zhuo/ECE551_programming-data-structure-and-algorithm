@@ -28,7 +28,7 @@ int main(int argc, char ** argv) {
     //newStr = malloc(sizeof(*newStr) * len);
     char * p1 = NULL;  //find 1st '_'
     char * p2 = NULL;  //find 2st '_'
-    char newStr[500];
+    char newStr[500] = {'\0'};
     for (ssize_t i = 0; i < len; i++) {
       if (*(line + i) == '_') {
         flag = -flag;
@@ -71,18 +71,24 @@ int main(int argc, char ** argv) {
         }
       }
     }
+
+    if (flag == -1) {
+      printf("Missing closing uderscore!\n");
+      exit(EXIT_FAILURE);
+    }
+
     //printf("Before temp3: %s\n", newStr);
     p1 = line + len;  //p1 points at "\n"   (\n\0)
     char temp3[500] = {'\0'};
-    strncpy(temp3, p2 + 1, p1 - p2);
+    if (p2) {
+      strncpy(temp3, p2 + 1, p1 - p2);
+    }
+    else {  //p2 == NULL
+      strncpy(temp3, line, len);
+    }
     //newStr = realloc(newStr, sizeof(*newStr) * strlen(temp2));
     strcat(newStr, temp3);
     memset(temp3, 0, strlen(temp3));
-    if (flag == -1) {
-      printf("Wrong input format");
-      exit(EXIT_FAILURE);
-      //Add: Exit with an error status!
-    }
 
     printf("%s", newStr);
     free(line);
