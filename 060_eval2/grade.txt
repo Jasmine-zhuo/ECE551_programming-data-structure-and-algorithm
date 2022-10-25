@@ -1,6 +1,6 @@
-Grading at 10/25/2022:01:58:48.423220
-For commit ID 1d9afef2afda400101aa13b31ae899be9aa3bba1
-Grading at Mon Oct 24 09:58:47 PM EDT 2022
+Grading at 10/25/2022:02:05:31.630907
+For commit ID bda096a055bce81d59e2becf008f5f1a81b631c3
+Grading at Mon Oct 24 10:05:31 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -16,11 +16,9 @@ Checking with provided test case story.txt
 Your file matched the expected output
 Now running YOUR tests for step 1
 
-1.1: Current test is story-step1 story.txt
+1.1: Current test is story-step1 my_story.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You exited with a failure status (good) but did not print to stderr (bad)
 
 Step 2
 Checking that story-step2 compiles
