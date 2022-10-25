@@ -1,6 +1,6 @@
-Grading at 10/25/2022:01:00:50.472899
-For commit ID a769fefaa4719ecc3d252e94667797601591bbaf
-Grading at Mon Oct 24 09:00:49 PM EDT 2022
+Grading at 10/25/2022:01:27:39.749766
+For commit ID bdcde3db989e6cfc86b1c75c288380e9e3713b06
+Grading at Mon Oct 24 09:27:38 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -19,44 +19,8 @@ Now running YOUR tests for step 1
 1.1: Current test is story-step1 story.txt
 -----------------------------
 Your output looks good. Lets check valgrind
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks:
-==3679429== Memcheck, a memory error detector
-==3679429== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3679429== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3679429== Command: ./story-step1 story.txt
-==3679429== Parent PID: 3679428
-==3679429== 
-==3679429== Conditional jump or move depends on uninitialised value(s)
-==3679429==    at 0x484EE87: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3679429==    by 0x109525: main (story-step1.c:45)
-==3679429== 
-==3679429== Conditional jump or move depends on uninitialised value(s)
-==3679429==    at 0x484ED88: __strlen_sse2 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3679429==    by 0x109534: main (story-step1.c:46)
-==3679429== 
-==3679429== 
-==3679429== HEAP SUMMARY:
-==3679429==     in use at exit: 592 bytes in 2 blocks
-==3679429==   total heap usage: 6 allocs, 4 frees, 9,024 bytes allocated
-==3679429== 
-==3679429== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
-==3679429==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3679429==    by 0x48E31A2: getdelim (iogetdelim.c:62)
-==3679429==    by 0x109739: main (story-step1.c:27)
-==3679429== 
-==3679429== LEAK SUMMARY:
-==3679429==    definitely lost: 120 bytes in 1 blocks
-==3679429==    indirectly lost: 0 bytes in 0 blocks
-==3679429==      possibly lost: 0 bytes in 0 blocks
-==3679429==    still reachable: 472 bytes in 1 blocks
-==3679429==         suppressed: 0 bytes in 0 blocks
-==3679429== Reachable blocks (those to which a pointer was found) are not shown.
-==3679429== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==3679429== 
-==3679429== Use --track-origins=yes to see where uninitialised values come from
-==3679429== For lists of detected and suppressed errors, rerun with: -s
-==3679429== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 Step 2
 Checking that story-step2 compiles
