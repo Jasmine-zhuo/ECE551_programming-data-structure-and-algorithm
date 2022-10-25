@@ -1,6 +1,6 @@
-Grading at 10/25/2022:02:05:31.630907
-For commit ID bda096a055bce81d59e2becf008f5f1a81b631c3
-Grading at Mon Oct 24 10:05:31 PM EDT 2022
+Grading at 10/25/2022:02:09:42.752143
+For commit ID cd6274670bf700f551325581eb9f37300b75c1fc
+Grading at Mon Oct 24 10:09:41 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -18,7 +18,9 @@ Now running YOUR tests for step 1
 
 1.1: Current test is story-step1 my_story.txt
 -----------------------------
-You exited with a failure status (good) but did not print to stderr (bad)
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
 
 Step 2
 Checking that story-step2 compiles
