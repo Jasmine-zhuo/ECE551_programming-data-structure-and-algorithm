@@ -37,16 +37,16 @@ int main(int argc, char ** argv) {
 	temp=line+1;
 	}*/
         if (flag == -1) {
-          char temp1[500];
+          char temp1[500] = {'\0'};
           p1 = line + i;
           if (p2 == NULL) {
             key_len1 = p1 - line;
             strncpy(temp1, line, key_len1);
             strcpy(newStr, temp1);
-            memset(temp1, 0, strlen(temp1));
+            memset(temp1, 0, 500);
           }
           else {
-            char temp1[500];
+            char temp1[500] = {'\0'};
             //printf("After a front _ was found, before copying into temp1, it is:%s\n",
             //       temp1);
             key_len1 = p1 - p2 - 1;
@@ -73,7 +73,7 @@ int main(int argc, char ** argv) {
     }
     //printf("Before temp3: %s\n", newStr);
     p1 = line + len;  //p1 points at "\n"   (\n\0)
-    char temp3[500];
+    char temp3[500] = {'\0'};
     strncpy(temp3, p2 + 1, p1 - p2);
     //newStr = realloc(newStr, sizeof(*newStr) * strlen(temp2));
     strcat(newStr, temp3);
@@ -83,12 +83,12 @@ int main(int argc, char ** argv) {
       exit(EXIT_FAILURE);
       //Add: Exit with an error status!
     }
-    //char * p = strchr(line, '_');
-    free(line);
-    line = NULL;
-    //free(newStr);
-    //    newStr = NULL;
 
     printf("%s", newStr);
+    free(line);
+    line = NULL;
   }  //end of while
+  free(line);
+  fclose(f);
+  return EXIT_SUCCESS;
 }

@@ -1,106 +1,28 @@
-==3424591== Memcheck, a memory error detector
-==3424591== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3424591== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3424591== Command: ./story-step1 story.txt
-==3424591== 
-==3424591== Conditional jump or move depends on uninitialised value(s)
-==3424591==    at 0x484EA2D: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109585: main (story-step1.c:47)
-==3424591== 
-==3424591== Conditional jump or move depends on uninitialised value(s)
-==3424591==    at 0x484EA57: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109585: main (story-step1.c:47)
-==3424591== 
-==3424591== Invalid write of size 1
-==3424591==    at 0x484EA5E: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109585: main (story-step1.c:47)
-==3424591==  Address 0x4a8f40e is 0 bytes after a block of size 30 alloc'd
-==3424591==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109565: main (story-step1.c:46)
-==3424591== 
-==3424591== Conditional jump or move depends on uninitialised value(s)
-==3424591==    at 0x484EA37: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109585: main (story-step1.c:47)
-==3424591== 
-==3424591== Invalid write of size 1
-==3424591==    at 0x484EA4C: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109585: main (story-step1.c:47)
-==3424591==  Address 0x4a8f4b5 is 0 bytes after a block of size 21 alloc'd
-==3424591==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109565: main (story-step1.c:46)
-==3424591== 
-==3424591== Invalid read of size 1
-==3424591==    at 0x484EA34: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109699: main (story-step1.c:61)
-==3424591==  Address 0x4a8f551 is 0 bytes after a block of size 1 alloc'd
-==3424591==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109679: main (story-step1.c:60)
-==3424591== 
-==3424591== Invalid write of size 1
-==3424591==    at 0x484EA4C: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109699: main (story-step1.c:61)
-==3424591==  Address 0x4a8f551 is 0 bytes after a block of size 1 alloc'd
-==3424591==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109679: main (story-step1.c:60)
-==3424591== 
-==3424591== Invalid write of size 1
-==3424591==    at 0x484EA5E: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109699: main (story-step1.c:61)
-==3424591==  Address 0x4a8f552 is 1 bytes after a block of size 1 alloc'd
-==3424591==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x109679: main (story-step1.c:60)
-==3424591== 
-==3424591== Invalid read of size 1
-==3424591==    at 0x484F2FF: __strncpy_sse2_unaligned (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x10954C: main (story-step1.c:44)
-==3424591==  Address 0x4a8e2a6 is 70 bytes inside a block of size 120 free'd
-==3424591==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x1096CF: main (story-step1.c:68)
-==3424591==  Block was alloc'd at
-==3424591==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x48E31A2: getdelim (iogetdelim.c:62)
-==3424591==    by 0x109714: main (story-step1.c:27)
-==3424591== 
-==3424591== Invalid read of size 1
-==3424591==    at 0x484F31D: __strncpy_sse2_unaligned (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x10954C: main (story-step1.c:44)
-==3424591==  Address 0x4a8e2a7 is 71 bytes inside a block of size 120 free'd
-==3424591==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x1096CF: main (story-step1.c:68)
-==3424591==  Block was alloc'd at
-==3424591==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x48E31A2: getdelim (iogetdelim.c:62)
-==3424591==    by 0x109714: main (story-step1.c:27)
-==3424591== 
-==3424591== Invalid write of size 1
-==3424591==    at 0x484F39C: __strncpy_sse2_unaligned (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x10954C: main (story-step1.c:44)
-==3424591==  Address 0x1fff001000 is not stack'd, malloc'd or (recently) free'd
-==3424591== 
-==3424591== 
-==3424591== Process terminating with default action of signal 11 (SIGSEGV)
-==3424591==  Access not within mapped region at address 0x1FFF001000
-==3424591==    at 0x484F39C: __strncpy_sse2_unaligned (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3424591==    by 0x10954C: main (story-step1.c:44)
-==3424591==  If you believe this happened as a result of a stack
-==3424591==  overflow in your program's main thread (unlikely but
-==3424591==  possible), you can try to increase the size of the
-==3424591==  main thread stack using the --main-stacksize= flag.
-==3424591==  The main thread stack size used in this run was 10022912.
-==3424591== 
-==3424591== HEAP SUMMARY:
-==3424591==     in use at exit: 4,698 bytes in 4 blocks
-==3424591==   total heap usage: 11 allocs, 7 frees, 4,947 bytes allocated
-==3424591== 
-==3424591== LEAK SUMMARY:
-==3424591==    definitely lost: 0 bytes in 0 blocks
-==3424591==    indirectly lost: 0 bytes in 0 blocks
-==3424591==      possibly lost: 0 bytes in 0 blocks
-==3424591==    still reachable: 4,698 bytes in 4 blocks
-==3424591==         suppressed: 0 bytes in 0 blocks
-==3424591== Rerun with --leak-check=full to see details of leaked memory
-==3424591== 
-==3424591== Use --track-origins=yes to see where uninitialised values come from
-==3424591== For lists of detected and suppressed errors, rerun with: -s
-==3424591== ERROR SUMMARY: 24 errors from 11 contexts (suppressed: 0 from 0)
-segmentation fault (core dumped)
+==3703244== Memcheck, a memory error detector
+==3703244== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3703244== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3703244== Command: ./story-step1 story.txt
+==3703244== 
+Once upon a time, there was a cat who lived in a very cat
+cat. 
+==3703244== 
+==3703244== HEAP SUMMARY:
+==3703244==     in use at exit: 592 bytes in 2 blocks
+==3703244==   total heap usage: 6 allocs, 4 frees, 5,952 bytes allocated
+==3703244== 
+==3703244== 120 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==3703244==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3703244==    by 0x48E31A2: getdelim (iogetdelim.c:62)
+==3703244==    by 0x1097D1: main (story-step1.c:27)
+==3703244== 
+==3703244== LEAK SUMMARY:
+==3703244==    definitely lost: 120 bytes in 1 blocks
+==3703244==    indirectly lost: 0 bytes in 0 blocks
+==3703244==      possibly lost: 0 bytes in 0 blocks
+==3703244==    still reachable: 472 bytes in 1 blocks
+==3703244==         suppressed: 0 bytes in 0 blocks
+==3703244== Reachable blocks (those to which a pointer was found) are not shown.
+==3703244== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==3703244== 
+==3703244== For lists of detected and suppressed errors, rerun with: -s
+==3703244== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
