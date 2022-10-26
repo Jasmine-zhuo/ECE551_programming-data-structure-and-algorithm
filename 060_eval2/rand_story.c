@@ -151,18 +151,19 @@ void replace(FILE * f, catarray_t * array, category_t * usedWords, int sym) {
                 realloc(curCat->words, sizeof(*(curCat->words)) * (curCat->n_words - 1));
             curCat->n_words--;
             if (curCat->n_words == 0) {
-              printf("Category %s should be remove now! It's index in Cat ARRAY is %d!\n",
+              //   printf("Category %s should be remove now! It's index in Cat ARRAY is %d!\n",
                      curCat->name,
                      (int)cat_index);
-              //category_t * deleCat = curCat;
-              free(curCat->name);
-              free(curCat->words);
-              for (size_t k = cat_index + 1; k < array->n; k++) {
-                array->arr[k - 1] = array->arr[k];
-              }
+                     //category_t * deleCat = curCat;
+                     free(curCat->name);
+                     free(curCat->words);
+                     for (size_t k = cat_index + 1; k < array->n; k++) {
+                       array->arr[k - 1] = array->arr[k];
+                     }
 
-              array->arr = realloc(array->arr, sizeof(*(array->arr)) * (array->n - 1));
-              array->n--;
+                     array->arr =
+                         realloc(array->arr, sizeof(*(array->arr)) * (array->n - 1));
+                     array->n--;
             }
           }
         }
