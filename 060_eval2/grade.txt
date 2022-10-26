@@ -1,6 +1,6 @@
-Grading at 10/26/2022:14:09:52.145553
-For commit ID c55a5ab0862f3f6b4b6b3f35f97e7f0a961c88fa
-Grading at Wed Oct 26 10:09:48 AM EDT 2022
+Grading at 10/26/2022:14:12:49.841245
+For commit ID dbd7bdff261d1c45b22e576d69c61be8dd2852a8
+Grading at Wed Oct 26 10:12:46 AM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -21,36 +21,36 @@ Now running YOUR tests for step 1
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind reported errors:
-==2548524== Memcheck, a memory error detector
-==2548524== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2548524== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2548524== Command: ./story-step1 story1-step1.txt
-==2548524== Parent PID: 2548523
-==2548524== 
-==2548524== Invalid read of size 4
-==2548524==    at 0x48E315D: getdelim (iogetdelim.c:52)
-==2548524==    by 0x109900: main (story-step1.c:21)
-==2548524==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==2548524== 
-==2548524== 
-==2548524== Process terminating with default action of signal 11 (SIGSEGV)
-==2548524==  Access not within mapped region at address 0x0
-==2548524==    at 0x48E315D: getdelim (iogetdelim.c:52)
-==2548524==    by 0x109900: main (story-step1.c:21)
-==2548524==  If you believe this happened as a result of a stack
-==2548524==  overflow in your program's main thread (unlikely but
-==2548524==  possible), you can try to increase the size of the
-==2548524==  main thread stack using the --main-stacksize= flag.
-==2548524==  The main thread stack size used in this run was 8388608.
-==2548524== 
-==2548524== HEAP SUMMARY:
-==2548524==     in use at exit: 0 bytes in 0 blocks
-==2548524==   total heap usage: 1 allocs, 1 frees, 472 bytes allocated
-==2548524== 
-==2548524== For a detailed leak analysis, rerun with: --leak-check=full
-==2548524== 
-==2548524== For lists of detected and suppressed errors, rerun with: -s
-==2548524== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2553198== Memcheck, a memory error detector
+==2553198== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2553198== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2553198== Command: ./story-step1 story1-step1.txt
+==2553198== Parent PID: 2553197
+==2553198== 
+==2553198== Invalid read of size 4
+==2553198==    at 0x48E315D: getdelim (iogetdelim.c:52)
+==2553198==    by 0x109900: main (story-step1.c:21)
+==2553198==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==2553198== 
+==2553198== 
+==2553198== Process terminating with default action of signal 11 (SIGSEGV)
+==2553198==  Access not within mapped region at address 0x0
+==2553198==    at 0x48E315D: getdelim (iogetdelim.c:52)
+==2553198==    by 0x109900: main (story-step1.c:21)
+==2553198==  If you believe this happened as a result of a stack
+==2553198==  overflow in your program's main thread (unlikely but
+==2553198==  possible), you can try to increase the size of the
+==2553198==  main thread stack using the --main-stacksize= flag.
+==2553198==  The main thread stack size used in this run was 8388608.
+==2553198== 
+==2553198== HEAP SUMMARY:
+==2553198==     in use at exit: 0 bytes in 0 blocks
+==2553198==   total heap usage: 1 allocs, 1 frees, 472 bytes allocated
+==2553198== 
+==2553198== For a detailed leak analysis, rerun with: --leak-check=full
+==2553198== 
+==2553198== For lists of detected and suppressed errors, rerun with: -s
+==2553198== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 
 Step 2
 Checking that story-step2 compiles
