@@ -1,4 +1,4 @@
-story-step1 story1-step1.txt
+story-step1 story1_step1_NULLcate.txt
 story-step2 words.txt
 story-step2 words2.txt
 story-step2 words3.txt
