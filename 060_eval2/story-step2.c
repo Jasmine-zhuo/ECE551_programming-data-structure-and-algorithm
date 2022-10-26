@@ -31,40 +31,44 @@ void addString(const char * line, catarray_t * array) {
   category_t * newCat = NULL;
   newCat = divString(line);
 
-  printf("The category and the word I just found in this line is:%s,%s\n",
-         newCat->name,
-         newCat->words[0]);
+  //  printf("The category and the word I just found in this line is:%s,%s\n",
+  //     newCat->name,
+  //      newCat->words[0]);
 
   size_t i = 0;
   for (i = 0; i < array->n; i++) {
     category_t * cur_cat = (array->arr) + i;
     if (!strcmp(newCat->name, cur_cat->name)) {  //if same name
-      printf("This category name already exist! It is: %s\n", newCat->name);
+      //  printf("This category name already exist! It is: %s\n", newCat->name);
       cur_cat->n_words++;
       cur_cat->words =
           realloc(cur_cat->words, sizeof(*(cur_cat->words)) * (cur_cat->n_words));
-      cur_cat->words[(cur_cat->n_words) - 1] = *(newCat->words);
+      cur_cat->words[(cur_cat->n_words) - 1] = (newCat->words)[0];
+      free(newCat->words);
+      free(newCat->name);
+      //strcpy(cur_cat->words[(cur_cat->n_words) - 1], (*(newCat->words)));
       break;
     }
   }
-  printf("Now, there are %d categories stored!\n", (int)array->n);
+  //printf("Now, there are %d categories stored!\n", (int)array->n);
   if (i == array->n) {
-    printf("Never seen this category! It is %s\n", newCat->name);
+    //    printf("Never seen this category! It is %s\n", newCat->name);
     (array->n)++;
     array->arr = realloc((array->arr), sizeof(*(array->arr)) * (array->n));
-
-    array->arr[(array->n) - 1].name = (newCat->name);
-    array->arr[(array->n) - 1].words = (newCat->words);
-    array->arr[(array->n) - 1].n_words = 1;
+    category_t * target_cat = (array->arr) + ((array->n) - 1);
+    //  target_cat->name = malloc((strlen(newCat->name) + 1) * sizeof(*(target_cat->name)));
+    // strcpy(target_cat->name, (newCat->name));
+    target_cat->name = newCat->name;
+    target_cat->words = newCat->words;
+    target_cat->n_words = 1;
   }
-  free(newCat->name);
-  free(newCat->words);
+
   free(newCat);
 }
 void freeStr(catarray_t * array) {
   for (size_t i = 0; i < array->n; i++) {
     category_t * cur_cat = (array->arr) + i;
-    //free(cur_cat->name);
+    free(cur_cat->name);
     for (size_t j = 0; j < cur_cat->n_words; j++) {
       free(cur_cat->words[j]);
     }
@@ -93,6 +97,7 @@ int main(int argc, char ** argv) {
     free(line);
     line = NULL;
   }
+  free(line);
   printWords(catarray);
   freeStr(catarray);
   fclose(f);
