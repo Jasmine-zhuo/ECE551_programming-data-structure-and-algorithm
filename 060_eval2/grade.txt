@@ -1,6 +1,6 @@
-Grading at 10/26/2022:14:18:46.961888
-For commit ID 2a58ee276cb515141b008d717db09072971e09e0
-Grading at Wed Oct 26 10:18:43 AM EDT 2022
+Grading at 10/26/2022:17:27:37.147242
+For commit ID 952af7a53d00c9fe9ad44dc91ad1985458157ada
+Grading at Wed Oct 26 01:27:31 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -61,6 +61,24 @@ rm story-step3.o
 The code compiled (good)
 Executable story-step3 exists (good)
 Now running YOUR tests for step 3
+
+3.1: Current test is story-step3 words2.txt story2.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+3.2: Current test is story-step3 words2.txt test3_1.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.3: Current test is story-step3 words2.txt test3_2.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
 
 Step 4
 Checking that story-step4 compiles
