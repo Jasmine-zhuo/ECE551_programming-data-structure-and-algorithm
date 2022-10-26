@@ -121,9 +121,9 @@ void replace(FILE * f, catarray_t * array, category_t * usedWords, int sym) {
             char * deleWord = NULL;
             category_t * curCat = NULL;
             for (size_t i = 0; i < array->n; i++) {
-              printf("Comparing %s with %s(in cateARRAY)\n",
-                     current_cat,
-                     ((array->arr) + i)->name);
+              //              printf("Comparing %s with %s(in cateARRAY)\n",
+              //     current_cat,
+              //     ((array->arr) + i)->name);
               if (!strcmp(current_cat, ((array->arr) + i)->name)) {
                 curCat = array->arr + i;
                 cat_index = i;
