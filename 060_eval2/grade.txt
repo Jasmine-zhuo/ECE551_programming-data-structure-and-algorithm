@@ -1,6 +1,6 @@
-Grading at 10/26/2022:20:45:27.564726
-For commit ID 7b902f7dc8c68e59975fd184a3a098ff30e8e9d4
-Grading at Wed Oct 26 04:45:17 PM EDT 2022
+Grading at 10/26/2022:20:47:27.691174
+For commit ID e56563c9047a660f5affc88b39a2e7d625812aa5
+Grading at Wed Oct 26 04:47:18 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -114,15 +114,8 @@ Valgrind was clean
 It looks like you got different output from us on that case.
 Here is the diff (yours on left, ours on right):
 
-Comparing animal with animal(in cateARRAY)		      <
 Once upon a time, there was a walrus. This walrus lived in a 	Once upon a time, there was a walrus. This walrus lived in a 
-Comparing adjective with animal(in cateARRAY)		      <
-Comparing adjective with place(in cateARRAY)		      <
-Comparing adjective with adjective(in cateARRAY)	      <
-Comparing place with animal(in cateARRAY)		      <
-Comparing place with place(in cateARRAY)		      <
 Category place should be remove now! It's index in Cat ARRAY  <
-Comparing animal with animal(in cateARRAY)		      <
 Category animal should be remove now! It's index in Cat ARRAY <
 peculiar cave. One day, it left its peculiar cave and met a d	peculiar cave. One day, it left its peculiar cave and met a d
 Your file did not match the expected ouput
