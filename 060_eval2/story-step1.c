@@ -14,18 +14,11 @@ int main(int argc, char ** argv) {
   char * line = NULL;
   int flag = 1;  //odd:-1 even:1
   FILE * f = fopen(argv[1], "r");
-  // char * p1 = NULL;  //find 1st '_'
-  //char * p2 = NULL;  //find 2nd '_'
-  //  char * p3 = NULL;     //find '\0'
-  //char temp1[500];  //front
-  //  char temp2[500];  //tail
-  //  char temp3[500];
   const char * replacedWord = NULL;
   if (f == NULL) {
     fprintf(stderr, "Fail to open the file");
   }
   while ((len = getline(&line, &sz, f)) >= 0) {
-    //newStr = malloc(sizeof(*newStr) * len);
     char * p1 = NULL;  //find 1st '_'
     char * p2 = NULL;  //find 2st '_'
     char newStr[500] = {'\0'};
@@ -33,9 +26,6 @@ int main(int argc, char ** argv) {
       if (*(line + i) == '_') {
         flag = -flag;
 
-        /*if(flag==-1){
-	temp=line+1;
-	}*/
         if (flag == -1) {
           char temp1[500] = {'\0'};
           p1 = line + i;
@@ -47,27 +37,17 @@ int main(int argc, char ** argv) {
           }
           else {
             char temp1[500] = {'\0'};
-            //printf("After a front _ was found, before copying into temp1, it is:%s\n",
-            //       temp1);
             key_len1 = p1 - p2 - 1;
             strncpy(temp1, p2 + 1, key_len1);
-            //printf("After a front _ was found, temp1 is:%s\n", temp1);
             strcat(newStr, temp1);
-            //printf("After a front _ was found, we got:%s\n", newStr);
             memset(temp1, 0, strlen(temp1));
           }
-          //newStr = realloc(newStr, sizeof(*newStr) * key_len1);
-          //strcat(newStr, temp1);
         }
         if (flag == 1) {
           p2 = line + i;
           replacedWord = chooseWord(NULL, NULL);  //will return "cat"
                                                   //int word_len = strlen(replacedWord);
-          // strcpy(temp2, replacedWord);
-          //strcat(newStr, temp2);
           strcat(newStr, replacedWord);
-          //newStr = realloc(newStr, sizeof(*newStr) * word_len);
-          //printf("After a back _ was found, we got:%s\n", newStr);
         }
       }
     }
@@ -78,8 +58,6 @@ int main(int argc, char ** argv) {
       fclose(f);
       exit(EXIT_FAILURE);
     }
-
-    //printf("Before temp3: %s\n", newStr);
     p1 = line + len;  //p1 points at "\n"   (\n\0)
     char temp3[500] = {'\0'};
     if (p2) {
@@ -88,7 +66,6 @@ int main(int argc, char ** argv) {
     else {  //p2 == NULL
       strncpy(temp3, line, len);
     }
-    //newStr = realloc(newStr, sizeof(*newStr) * strlen(temp2));
     strcat(newStr, temp3);
     memset(temp3, 0, strlen(temp3));
 
