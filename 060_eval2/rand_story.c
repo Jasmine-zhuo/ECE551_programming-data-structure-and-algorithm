@@ -6,6 +6,9 @@
 #include "string.h"
 int isNumber(char * s) {
   for (int i = 0; s[i] != '\0'; i++) {
+    if (s[0] == '0') {
+      return -1;
+    }
     if ((s[i] < '0') || (s[i] > '9')) {
       return -1;
     }
@@ -53,6 +56,18 @@ void replace(FILE * f, catarray_t * array, category_t * usedWords) {
           const char * replacedWord = NULL;
           p2 = line + i;
           int length = p2 - p1 - 1;
+          if (length == 0) {
+            fprintf(stderr, "invalid input");
+            free(line);
+            freeStr(array);
+            for (size_t i = 0; i < usedWords->n_words; i++) {
+              free(*(usedWords->words + i));
+            }
+            free(usedWords->words);
+            free(usedWords);
+            fclose(f);
+            exit(EXIT_FAILURE);
+          }
           char current_cat[100];
           strncpy(current_cat, p1 + 1, length);
           current_cat[length] = '\0';
@@ -61,16 +76,37 @@ void replace(FILE * f, catarray_t * array, category_t * usedWords) {
             //Match from previously used words
             char * endPtr = &current_cat[length];
             size_t index = strtol(current_cat, &endPtr, 10);
-            printf("The index we found is :%lu\n", index);
+            //printf("The index we found is :%lu\n", index);
             if (index > usedWords->n_words) {
               fprintf(stderr, "There is no that many used words!Invalid index!\n");
+              free(line);
+              freeStr(array);
+              for (size_t i = 0; i < usedWords->n_words; i++) {
+                free(*(usedWords->words + i));
+              }
+              free(usedWords->words);
+              free(usedWords);
+              fclose(f);
               exit(EXIT_FAILURE);  //!!!!!ADD:EXIT THINGS
             }
 
             int real_index = usedWords->n_words - index;
             replacedWord = usedWords->words[real_index];
           }
-          else {
+          else {  // invalid index, but might be a valid category
+            size_t i;
+            for (i = 0; i < array->n; i++) {
+              char * currname = ((array->arr) + i)->name;
+              if (!strcmp(currname, current_cat)) {
+                break;
+              }
+            }
+            if (i == array->n) {  //invalid category name!
+              fprintf(stderr, "invalid categoty");
+              fclose(f);
+              exit(EXIT_FAILURE);
+            }
+
             replacedWord = chooseWord(current_cat, array);  //will return "cat"
           }
           usedWords->words = realloc(
@@ -82,14 +118,14 @@ void replace(FILE * f, catarray_t * array, category_t * usedWords) {
           strcat(newStr, replacedWord);
         }
       }
-    }  //end of for
-
+    }
     if (flag == -1) {
       fprintf(stderr, "Missing closing uderscore!\n");
       free(line);
       fclose(f);
       exit(EXIT_FAILURE);
     }
+
     p1 = line + len;  //p1 points at "\n"   (\n\0)
     char temp3[500] = {'\0'};
     if (p2) {
@@ -105,6 +141,10 @@ void replace(FILE * f, catarray_t * array, category_t * usedWords) {
     free(line);
     line = NULL;
   }  //end of while
+  for (size_t i = 0; i < usedWords->n_words; i++) {
+    free(*(usedWords->words + i));
+  }
+  free(usedWords->words);
   free(line);
   return;
 }  //end of replace
@@ -193,7 +233,6 @@ void parseArray(catarray_t * catarray, FILE * f) {
     line = NULL;
   }
   free(line);
-  printWords(catarray);
-
+  //printWords(catarray);
   return;
 }

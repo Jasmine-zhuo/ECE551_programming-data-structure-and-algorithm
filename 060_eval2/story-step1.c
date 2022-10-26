@@ -14,6 +14,10 @@ int main(int argc, char ** argv) {
   char * line = NULL;
   int flag = 1;  //odd:-1 even:1
   FILE * f = fopen(argv[1], "r");
+  if (f == NULL) {
+    fprintf(stderr, "An error occured when opening a file!\n");
+    exit(EXIT_FAILURE);
+  }
   const char * replacedWord = NULL;
   if (f == NULL) {
     fprintf(stderr, "Fail to open the file");

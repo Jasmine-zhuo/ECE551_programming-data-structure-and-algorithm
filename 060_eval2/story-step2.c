@@ -3,23 +3,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "string.h"
-/*category_t * divString(const char * line) {
-  const char * p = strchr(line, ':');
-  const char * x = strchr(line, '\n');
-  category_t * newCat = malloc(sizeof(*newCat));
-  size_t name_len = p - line;
-  newCat->name = malloc((name_len + 1) * sizeof(*(newCat->name)));
-  strncpy(newCat->name, line, name_len);
-  newCat->name[name_len] = '\0';
 
-  size_t word_len = x - p - 1;
-  newCat->words = malloc(sizeof(*(newCat->words)));
-  newCat->words[0] = malloc((word_len + 1) * sizeof(*(newCat->words[0])));
-  strncpy(*(newCat->words), p + 1, word_len);
-  newCat->words[0][word_len] = '\0';
-  newCat->n_words = 1;
-  return newCat;
-  }*/
 void addString_step2(const char * line, catarray_t * array) {
   category_t * newCat = NULL;
   newCat = divString(line);
@@ -51,18 +35,7 @@ void addString_step2(const char * line, catarray_t * array) {
 
   free(newCat);
 }
-/*void freeStr(catarray_t * array) {
-  for (size_t i = 0; i < array->n; i++) {
-    category_t * cur_cat = (array->arr) + i;
-    free(cur_cat->name);
-    for (size_t j = 0; j < cur_cat->n_words; j++) {
-      free(cur_cat->words[j]);
-    }
-    free(cur_cat->words);
-  }
-  free(array->arr);
-  free(array);
-  }*/
+
 int main(int argc, char ** argv) {
   if (argc != 2) {
     fprintf(stderr, "Wrong input number");
@@ -75,7 +48,9 @@ int main(int argc, char ** argv) {
 
   FILE * f = fopen(argv[1], "r");
   if (f == NULL) {
-    fprintf(stderr, "Fail to open file");
+    fprintf(stderr, "An error occured when opening a file!\n");
+    free(catarray);
+    exit(EXIT_FAILURE);
   }
   while (getline(&line, &sz, f) >= 0) {
     const char * p = strchr(line, ':');
