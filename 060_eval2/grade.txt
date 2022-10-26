@@ -1,6 +1,6 @@
-Grading at 10/26/2022:02:48:55.405765
-For commit ID deb40d5ca0e637ac4b0696581cec6b6fdb2a575f
-Grading at Tue Oct 25 10:48:53 PM EDT 2022
+Grading at 10/26/2022:03:35:27.216451
+For commit ID 1b8e8637567cdbb5151acc45881e9120e37297f5
+Grading at Tue Oct 25 11:35:25 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -35,9 +35,9 @@ Now running YOUR tests for step 2
 
 2.1: Current test is story-step2 words.txt
 -----------------------------
-You considered this a failure case:
-timeout: the monitored command dumped core
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 Step 3
 Checking that story-step3 compiles
