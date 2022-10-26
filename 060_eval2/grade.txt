@@ -1,11 +1,11 @@
-Grading at 10/25/2022:02:09:42.752143
-For commit ID cd6274670bf700f551325581eb9f37300b75c1fc
-Grading at Mon Oct 24 10:09:41 PM EDT 2022
+Grading at 10/26/2022:02:48:55.405765
+For commit ID deb40d5ca0e637ac4b0696581cec6b6fdb2a575f
+Grading at Tue Oct 25 10:48:53 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
 Checking that story-step1 compiles
-rm -f *~ story-step1  story-step1.o rand_story.o
+rm -f *~ story-step1  story-step2  story-step1.o story-step2.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
 gcc -o story-step1 story-step1.o rand_story.o provided.o
@@ -24,9 +24,24 @@ Valgrind was clean
 
 Step 2
 Checking that story-step2 compiles
-rm -f *~ story-step1  story-step1.o rand_story.o
+rm -f *~ story-step1  story-step2  story-step1.o story-step2.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
+gcc -o story-step2 story-step2.o rand_story.o provided.o
+rm story-step2.o
+The code compiled (good)
+Executable story-step2 exists (good)
+Now running YOUR tests for step 2
+
+2.1: Current test is story-step2 words.txt
+-----------------------------
+You considered this a failure case:
+timeout: the monitored command dumped core
+But we did not.
+
+Step 3
+Checking that story-step3 compiles
+rm -f *~ story-step1  story-step2  story-step1.o story-step2.o rand_story.o
 The code did not compile!
 
 Overall Grade: NO GRADE YET
