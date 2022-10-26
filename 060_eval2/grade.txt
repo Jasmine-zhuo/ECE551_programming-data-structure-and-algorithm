@@ -1,11 +1,11 @@
-Grading at 10/26/2022:17:27:37.147242
-For commit ID 952af7a53d00c9fe9ad44dc91ad1985458157ada
-Grading at Wed Oct 26 01:27:31 PM EDT 2022
+Grading at 10/26/2022:20:45:27.564726
+For commit ID 7b902f7dc8c68e59975fd184a3a098ff30e8e9d4
+Grading at Wed Oct 26 04:45:17 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
 Checking that story-step1 compiles
-rm -f *~ story-step1  story-step2  story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
+rm -f *~ story-step1  story-step2  story-step3  story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
 gcc -o story-step1 story-step1.o rand_story.o provided.o
@@ -22,9 +22,21 @@ Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
+1.2: Current test is story-step1 story2.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+1.3: Current test is story-step1 story1-step1.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
 Step 2
 Checking that story-step2 compiles
-rm -f *~ story-step1  story-step2  story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
+rm -f *~ story-step1  story-step2  story-step3  story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
 gcc -o story-step2 story-step2.o rand_story.o provided.o
@@ -53,7 +65,7 @@ Valgrind was clean
 
 Step 3
 Checking that story-step3 compiles
-rm -f *~ story-step1  story-step2  story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
+rm -f *~ story-step1  story-step2  story-step3  story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step3.c
 gcc -o story-step3 story-step3.o rand_story.o provided.o
@@ -82,7 +94,54 @@ Valgrind was clean
 
 Step 4
 Checking that story-step4 compiles
-rm -f *~ story-step1  story-step2  story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
-The code did not compile!
+rm -f *~ story-step1  story-step2  story-step3  story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step4.c
+gcc -o story-step4 story-step4.o rand_story.o provided.o
+rm story-step4.o
+The code compiled (good)
+Executable story-step4 exists (good)
+Now running YOUR tests for step 4
+
+4.1: Current test is story-step4 words2.txt story2.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+4.2: Current test is story-step4 -n words2.txt story2.txt
+-----------------------------
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
+
+Comparing animal with animal(in cateARRAY)		      <
+Once upon a time, there was a walrus. This walrus lived in a 	Once upon a time, there was a walrus. This walrus lived in a 
+Comparing adjective with animal(in cateARRAY)		      <
+Comparing adjective with place(in cateARRAY)		      <
+Comparing adjective with adjective(in cateARRAY)	      <
+Comparing place with animal(in cateARRAY)		      <
+Comparing place with place(in cateARRAY)		      <
+Category place should be remove now! It's index in Cat ARRAY  <
+Comparing animal with animal(in cateARRAY)		      <
+Category animal should be remove now! It's index in Cat ARRAY <
+peculiar cave. One day, it left its peculiar cave and met a d	peculiar cave. One day, it left its peculiar cave and met a d
+Your file did not match the expected ouput
+
+
+4.3: Current test is story-step4 -q words2.txt story2.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.4: Current test is story-step4 -n words-step444.txt story2-step444.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+You have NOT passed your test cases!
+You should go and figure out/understand where thing went wrong
+And fix the problem(s) before the deadline
 
 Overall Grade: NO GRADE YET
