@@ -17,7 +17,7 @@ int isNumber(char * s) {
   return 1;
 }
 
-void replace(FILE * f, catarray_t * array, category_t * usedWords) {
+void replace(FILE * f, catarray_t * array, category_t * usedWords, int sym) {
   size_t sz = 0;
   ssize_t len = 0;
   size_t key_len1 = 0;
@@ -87,7 +87,7 @@ void replace(FILE * f, catarray_t * array, category_t * usedWords) {
               free(usedWords->words);
               free(usedWords);
               fclose(f);
-              exit(EXIT_FAILURE);  //!!!!!ADD:EXIT THINGS
+              exit(EXIT_FAILURE);
             }
 
             int real_index = usedWords->n_words - index;
@@ -114,8 +114,57 @@ void replace(FILE * f, catarray_t * array, category_t * usedWords) {
           (usedWords->n_words)++;
           *(usedWords->words + (usedWords->n_words - 1)) = strdup(replacedWord);
           //strcpy(usedWords->words[(usedWords->n_words) - 1], current_cat);
-
           strcat(newStr, replacedWord);
+          if ((isNum == -1) && sym == -1) {
+            size_t word_index = 0;
+            size_t cat_index = 0;
+            char * deleWord = NULL;
+            category_t * curCat = NULL;
+            for (size_t i = 0; i < array->n; i++) {
+              printf("Comparing %s with %s(in cateARRAY)\n",
+                     current_cat,
+                     ((array->arr) + i)->name);
+              if (!strcmp(current_cat, ((array->arr) + i)->name)) {
+                curCat = array->arr + i;
+                cat_index = i;
+                break;
+              }
+            }
+            if (curCat == NULL) {
+              printf("Did not found curCat for the word we are trying to delete!\n");
+            }
+            for (size_t j = 0; j < curCat->n_words; j++) {
+              if (!strcmp(replacedWord,
+                          *(curCat->words +
+                            j))) {  //found the place of the word we just chose
+                word_index = j;
+                break;
+              }
+            }
+            //now begin removing this word, freeing its memory and move all the other words that comes after it one block forward
+            deleWord = *(curCat->words + word_index);
+            for (size_t i = word_index + 1; i < curCat->n_words; i++) {
+              curCat->words[i - 1] = curCat->words[i];
+            }
+            free(deleWord);
+            curCat->words =
+                realloc(curCat->words, sizeof(*(curCat->words)) * (curCat->n_words - 1));
+            curCat->n_words--;
+            if (curCat->n_words == 0) {
+              printf("Category %s should be remove now! It's index in Cat ARRAY is %d!\n",
+                     curCat->name,
+                     (int)cat_index);
+              //category_t * deleCat = curCat;
+              free(curCat->name);
+              free(curCat->words);
+              for (size_t k = cat_index + 1; k < array->n; k++) {
+                array->arr[k - 1] = array->arr[k];
+              }
+
+              array->arr = realloc(array->arr, sizeof(*(array->arr)) * (array->n - 1));
+              array->n--;
+            }
+          }
         }
       }
     }

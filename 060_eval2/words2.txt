@@ -4,4 +4,3 @@ place:cave
 adjective:peculiar
 adjective:scary
 adjective:peaceful
-animal::mycat

@@ -1,10 +1,13 @@
 story-step1 story1_step1_NULLcate.txt
+story-step1 story2.txt
+story-step1 story1-step1.txt
 story-step2 words.txt
 story-step2 words2.txt
 story-step2 words3.txt
 story-step3 words2.txt story2.txt
 story-step3 words2.txt test3_1.txt
 story-step3 words2.txt test3_2.txt
-
-#story-step4 words.txt story2.txt
-#story-step4 -n words.txt story2.txt
+story-step4 words2.txt story2.txt
+story-step4 -n words2.txt story2.txt
+story-step4 -q words2.txt story2.txt
+story-step4 -n words-step444.txt story2-step444.txt
