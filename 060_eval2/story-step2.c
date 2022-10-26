@@ -6,10 +6,6 @@
 category_t * divString(const char * line) {
   const char * p = strchr(line, ':');
   const char * x = strchr(line, '\n');
-  if (p == NULL) {
-    fprintf(stderr, "Invalid input, there is no \" : \" in this line");
-    exit(EXIT_FAILURE);
-  }
   category_t * newCat = malloc(sizeof(*newCat));
   size_t name_len = p - line;
   newCat->name = malloc((name_len + 1) * sizeof(*(newCat->name)));
@@ -93,6 +89,15 @@ int main(int argc, char ** argv) {
     fprintf(stderr, "Fail to open file");
   }
   while (getline(&line, &sz, f) >= 0) {
+    const char * p = strchr(line, ':');
+    if (p == NULL) {
+      fprintf(stderr, "Invalid input, there is no \" : \" in this line");
+      free(line);
+      freeStr(catarray);
+      fclose(f);
+      exit(EXIT_FAILURE);
+    }
+
     addString(line, catarray);
     free(line);
     line = NULL;
