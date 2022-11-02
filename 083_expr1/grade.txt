@@ -1,11 +1,22 @@
-Grading at 11/02/2022:17:36:06.537523
-For commit ID f9848f1b91d0c802b48d5f497e06529857251157
-Grading at Wed Nov  2 01:36:06 PM EDT 2022
+Grading at 11/02/2022:17:43:09.511946
+For commit ID 5a38c2c0cf836554e89b032a92d1e39287026112
+Grading at Wed Nov  2 01:43:06 PM EDT 2022
 Compiling code
-expr.cpp:1:10: fatal error: expr.hpp: No such file or directory
-    1 | #include "expr.hpp"
-      |          ^~~~~~~~~~
-compilation terminated.
-The code did not compile.
+The code compiled.
+---------------------
+Test case 1
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
+---------------------
+Test case 2
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
+---------------------
+Test case 3
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 
-Overall Grade: F
+Overall Grade: A
