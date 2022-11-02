@@ -8,18 +8,6 @@
 #include <vector>
 
 //YOUR CODE GOES HERE!
-
-#endif
-#ifndef __T_MATRIX_H___
-#define __T_MATRIX_H___
-
-#include <assert.h>
-
-#include <cstdlib>
-#include <iostream>
-#include <vector>
-
-//YOUR CODE GOES HERE!
 template<typename T>
 class Matrix {
  private:
