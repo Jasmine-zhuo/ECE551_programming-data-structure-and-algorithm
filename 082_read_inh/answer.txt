@@ -18,5 +18,5 @@ Leon roars.
 Leon purrs.
 ~Animal(Leon)
 ~Cat(Fluffy)
-Flutty purrs.
+Fluffy purrs.
 ~Animal(Fluffy)
