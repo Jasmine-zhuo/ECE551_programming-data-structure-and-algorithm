@@ -1,240 +1,50 @@
-Grading at 10/31/2022:02:35:08.905844
-For commit ID 421c874d6e31bc9a848cef126a68d321c13fa3b6
-Grading at Sun Oct 30 10:35:08 PM EDT 2022
+Grading at 11/02/2022:17:07:40.243482
+For commit ID f079d7f903e447ab4e0efc6444239bfc57706604
+Grading at Wed Nov  2 01:07:33 PM EDT 2022
 -----------------------------------------------
 testcase 1 : Testing with Matrix<int>
 ...compiling...
-test.cpp:4:9: error: ‘Matrix’ does not name a type
-    4 | typedef Matrix<TEST_TYPE> MatrixTy;
-      |         ^~~~~~
-test.cpp: In function ‘int main()’:
-test.cpp:18:3: error: ‘MatrixTy’ was not declared in this scope
-   18 |   MatrixTy m0;
-      |   ^~~~~~~~
-test.cpp:19:30: error: ‘m0’ was not declared in this scope
-   19 |   std::cout << "m0 is:\n" << m0 << std::endl;
-      |                              ^~
-test.cpp:20:11: error: expected ‘;’ before ‘m1’
-   20 |   MatrixTy m1(4,5);
-      |           ^~~
-      |           ;
-test.cpp:21:30: error: ‘m1’ was not declared in this scope
-   21 |   std::cout << "m1 is:\n" << m1 << std::endl;
-      |                              ^~
-test.cpp:28:11: error: expected ‘;’ before ‘m2’
-   28 |   MatrixTy m2(m1);
-      |           ^~~
-      |           ;
-test.cpp:29:30: error: ‘m2’ was not declared in this scope
-   29 |   std::cout << "m2 is:\n" << m2 << std::endl;
-      |                              ^~
-test.cpp:55:11: error: expected ‘;’ before ‘c’
-   55 |   MatrixTy c;
-      |           ^~
-      |           ;
-test.cpp:56:29: error: ‘c’ was not declared in this scope
-   56 |   std::cout << "c is:\n" << c << std::endl;
-      |                             ^
-test.cpp:60:11: error: expected ‘;’ before ‘d’
-   60 |   MatrixTy d;
-      |           ^~
-      |           ;
-test.cpp:61:11: error: expected ‘;’ before ‘e’
-   61 |   MatrixTy e;
-      |           ^~
-      |           ;
-test.cpp:62:11: error: expected ‘;’ before ‘f’
-   62 |   MatrixTy f = d+e;
-      |           ^~
-      |           ;
-test.cpp:63:29: error: ‘f’ was not declared in this scope
-   63 |   std::cout << "f is:\n" << f << std::endl;
-      |                             ^
-test.cpp:64:6: error: ‘d’ was not declared in this scope
-   64 |   if(d == e){
-      |      ^
-test.cpp:64:11: error: ‘e’ was not declared in this scope
-   64 |   if(d == e){
-      |           ^
-test.cpp:70:9: error: ‘MatrixTy’ does not name a type
-   70 |   const MatrixTy & m = m2;
-      |         ^~~~~~~~
-test.cpp:71:23: error: ‘m’ was not declared in this scope
-   71 |   for (int i = 0; i < m.getRows(); i++) {
-      |                       ^
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 2 : Testing with Matrix<std::string>
 ...compiling...
-test.cpp:4:9: error: ‘Matrix’ does not name a type
-    4 | typedef Matrix<TEST_TYPE> MatrixTy;
-      |         ^~~~~~
-test.cpp: In function ‘int main()’:
-test.cpp:18:3: error: ‘MatrixTy’ was not declared in this scope
-   18 |   MatrixTy m0;
-      |   ^~~~~~~~
-test.cpp:19:30: error: ‘m0’ was not declared in this scope
-   19 |   std::cout << "m0 is:\n" << m0 << std::endl;
-      |                              ^~
-test.cpp:20:11: error: expected ‘;’ before ‘m1’
-   20 |   MatrixTy m1(4,5);
-      |           ^~~
-      |           ;
-test.cpp:21:30: error: ‘m1’ was not declared in this scope
-   21 |   std::cout << "m1 is:\n" << m1 << std::endl;
-      |                              ^~
-test.cpp:28:11: error: expected ‘;’ before ‘m2’
-   28 |   MatrixTy m2(m1);
-      |           ^~~
-      |           ;
-test.cpp:29:30: error: ‘m2’ was not declared in this scope
-   29 |   std::cout << "m2 is:\n" << m2 << std::endl;
-      |                              ^~
-test.cpp:55:11: error: expected ‘;’ before ‘c’
-   55 |   MatrixTy c;
-      |           ^~
-      |           ;
-test.cpp:56:29: error: ‘c’ was not declared in this scope
-   56 |   std::cout << "c is:\n" << c << std::endl;
-      |                             ^
-test.cpp:60:11: error: expected ‘;’ before ‘d’
-   60 |   MatrixTy d;
-      |           ^~
-      |           ;
-test.cpp:61:11: error: expected ‘;’ before ‘e’
-   61 |   MatrixTy e;
-      |           ^~
-      |           ;
-test.cpp:62:11: error: expected ‘;’ before ‘f’
-   62 |   MatrixTy f = d+e;
-      |           ^~
-      |           ;
-test.cpp:63:29: error: ‘f’ was not declared in this scope
-   63 |   std::cout << "f is:\n" << f << std::endl;
-      |                             ^
-test.cpp:64:6: error: ‘d’ was not declared in this scope
-   64 |   if(d == e){
-      |      ^
-test.cpp:64:11: error: ‘e’ was not declared in this scope
-   64 |   if(d == e){
-      |           ^
-test.cpp:70:9: error: ‘MatrixTy’ does not name a type
-   70 |   const MatrixTy & m = m2;
-      |         ^~~~~~~~
-test.cpp:71:23: error: ‘m’ was not declared in this scope
-   71 |   for (int i = 0; i < m.getRows(); i++) {
-      |                       ^
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 3 : Testing with Matrix<(a custom class we wrote)>
 ...compiling...
-test.cpp:4:9: error: ‘Matrix’ does not name a type
-    4 | typedef Matrix<TEST_TYPE> MatrixTy;
-      |         ^~~~~~
-test.cpp: In function ‘int main()’:
-test.cpp:18:3: error: ‘MatrixTy’ was not declared in this scope
-   18 |   MatrixTy m0;
-      |   ^~~~~~~~
-test.cpp:19:30: error: ‘m0’ was not declared in this scope
-   19 |   std::cout << "m0 is:\n" << m0 << std::endl;
-      |                              ^~
-test.cpp:20:11: error: expected ‘;’ before ‘m1’
-   20 |   MatrixTy m1(4,5);
-      |           ^~~
-      |           ;
-test.cpp:21:30: error: ‘m1’ was not declared in this scope
-   21 |   std::cout << "m1 is:\n" << m1 << std::endl;
-      |                              ^~
-test.cpp:28:11: error: expected ‘;’ before ‘m2’
-   28 |   MatrixTy m2(m1);
-      |           ^~~
-      |           ;
-test.cpp:29:30: error: ‘m2’ was not declared in this scope
-   29 |   std::cout << "m2 is:\n" << m2 << std::endl;
-      |                              ^~
-test.cpp:55:11: error: expected ‘;’ before ‘c’
-   55 |   MatrixTy c;
-      |           ^~
-      |           ;
-test.cpp:56:29: error: ‘c’ was not declared in this scope
-   56 |   std::cout << "c is:\n" << c << std::endl;
-      |                             ^
-test.cpp:60:11: error: expected ‘;’ before ‘d’
-   60 |   MatrixTy d;
-      |           ^~
-      |           ;
-test.cpp:61:11: error: expected ‘;’ before ‘e’
-   61 |   MatrixTy e;
-      |           ^~
-      |           ;
-test.cpp:62:11: error: expected ‘;’ before ‘f’
-   62 |   MatrixTy f = d+e;
-      |           ^~
-      |           ;
-test.cpp:63:29: error: ‘f’ was not declared in this scope
-   63 |   std::cout << "f is:\n" << f << std::endl;
-      |                             ^
-test.cpp:64:6: error: ‘d’ was not declared in this scope
-   64 |   if(d == e){
-      |      ^
-test.cpp:64:11: error: ‘e’ was not declared in this scope
-   64 |   if(d == e){
-      |           ^
-test.cpp:70:9: error: ‘MatrixTy’ does not name a type
-   70 |   const MatrixTy & m = m2;
-      |         ^~~~~~~~
-test.cpp:71:23: error: ‘m’ was not declared in this scope
-   71 |   for (int i = 0; i < m.getRows(); i++) {
-      |                       ^
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 --------------------------------------------
 Preparing to test assert fails...
 Compiling assertion failure tester...
-testAbort.cpp:8:9: error: ‘Matrix’ does not name a type
-    8 | typedef Matrix<int> MatrixTy;
-      |         ^~~~~~
-testAbort.cpp: In function ‘int main(int, char**)’:
-testAbort.cpp:28:3: error: ‘MatrixTy’ was not declared in this scope
-   28 |   MatrixTy m1(nrows, ncols);
-      |   ^~~~~~~~
-testAbort.cpp:29:11: error: expected ‘;’ before ‘m2’
-   29 |   MatrixTy m2(nrows2, ncols2);
-      |           ^~~
-      |           ;
-testAbort.cpp:32:7: error: ‘m1’ was not declared in this scope
-   32 |       m1[i][j] = i+ j;
-      |       ^~
-testAbort.cpp:37:7: error: ‘m2’ was not declared in this scope
-   37 |       m2[i][j] = i* j;
-      |       ^~
-testAbort.cpp:41:11: error: expected ‘;’ before ‘m3’
-   41 |   MatrixTy m3;
-      |           ^~~
-      |           ;
-testAbort.cpp:42:8: error: ‘m3’ was not declared in this scope
-   42 |   DOIT(m3 = m1 + m2;);
-      |        ^~
-testAbort.cpp:13:145: note: in definition of macro ‘DOIT’
-   13 | #define DOIT(x) if (sigsetjmp(env,1)) { std::cout << "returned from sigsetjmp" << std::endl; } else {std::cout << "Doing " << #x << std::endl;  x; std:: cout << "Did " << #x << " iwthout abort" << std::endl; }
-      |                                                                                                                                                 ^
-testAbort.cpp:42:13: error: ‘m1’ was not declared in this scope
-   42 |   DOIT(m3 = m1 + m2;);
-      |             ^~
-testAbort.cpp:13:145: note: in definition of macro ‘DOIT’
-   13 | #define DOIT(x) if (sigsetjmp(env,1)) { std::cout << "returned from sigsetjmp" << std::endl; } else {std::cout << "Doing " << #x << std::endl;  x; std:: cout << "Did " << #x << " iwthout abort" << std::endl; }
-      |                                                                                                                                                 ^
-testAbort.cpp:42:18: error: ‘m2’ was not declared in this scope
-   42 |   DOIT(m3 = m1 + m2;);
-      |                  ^~
-testAbort.cpp:13:145: note: in definition of macro ‘DOIT’
-   13 | #define DOIT(x) if (sigsetjmp(env,1)) { std::cout << "returned from sigsetjmp" << std::endl; } else {std::cout << "Doing " << #x << std::endl;  x; std:: cout << "Did " << #x << " iwthout abort" << std::endl; }
-      |                                                                                                                                                 ^
-testAbort.cpp:43:21: error: ‘m3’ was not declared in this scope
-   43 |   DOIT(std::cout << m3[row][column] << "\n";);
-      |                     ^~
-testAbort.cpp:13:145: note: in definition of macro ‘DOIT’
-   13 | #define DOIT(x) if (sigsetjmp(env,1)) { std::cout << "returned from sigsetjmp" << std::endl; } else {std::cout << "Doing " << #x << std::endl;  x; std:: cout << "Did " << #x << " iwthout abort" << std::endl; }
-      |                                                                                                                                                 ^
-This code did not compile. Skipping remaining tests.
+Compiled.
+-----------------------------------------------
+testcase 4 :  operator[]: row number too high
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed
+-----------------------------------------------
+testcase 5 :  operator[]: row number too low
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed
+-----------------------------------------------
+testcase 6 :  operator+: different number of rows
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed
+-----------------------------------------------
+testcase 7 :  operator+: different number of columns
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed
 
-Overall Grade: F
+Overall Grade: A
