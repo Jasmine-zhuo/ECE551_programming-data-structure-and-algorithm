@@ -9,15 +9,20 @@ void testList(void) {
   assert(lst.getSize() == 0 && lst.size == 0 && lst.head == NULL && lst.tail == NULL);
   //[]
   lst.addFront(1);
-  assert(lst.getSize() == 1);
+  /*
   std::cout << "The size now is :" << lst.size << std::endl;
-  assert(lst.size == 1);
+  //  assert(lst.size == 1);
+  std::cout << "The size now given by getSize() is :" << lst.getSize() << std::endl;
+  assert(lst.getSize() == 1);
 
   assert(lst.getSize() == 1 && lst.size == 1 && lst.head == lst.tail &&
          lst.head != NULL && lst.head->data == 1 && lst.head->next == NULL &&
          lst.head->prev == NULL);
   //[1]
+  */
   lst.addBack(2);
+  std::cout << "The size now is :" << lst.size << std::endl;
+  std::cout << "The size now given by getSize() is :" << lst.getSize() << std::endl;
   assert(lst.getSize() == 2 && lst.size == 2 && lst.head->data == 1 &&
          lst.head->next->data == 2 && lst.tail->data == 2 && lst.head->prev == NULL &&
          lst.tail->next == NULL && lst.head->next->prev == lst.head);
