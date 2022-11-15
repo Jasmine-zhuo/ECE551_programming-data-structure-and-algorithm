@@ -1,68 +1,33 @@
-==1535628== Memcheck, a memory error detector
-==1535628== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==1535628== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==1535628== Command: ./test-lls
-==1535628== Parent PID: 1535627
-==1535628== 
-==1535628== Conditional jump or move depends on uninitialised value(s)
-==1535628==    at 0x109236: testList() (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628==    by 0x109D19: main (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628== 
-==1535628== Conditional jump or move depends on uninitialised value(s)
-==1535628==    at 0x499193E: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1535628==    by 0x49A00E9: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1535628==    by 0x1092CE: testList() (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628==    by 0x109D19: main (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628== 
-==1535628== Use of uninitialised value of size 8
-==1535628==    at 0x499181B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1535628==    by 0x4991968: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1535628==    by 0x49A00E9: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1535628==    by 0x1092CE: testList() (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628==    by 0x109D19: main (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628== 
-==1535628== Conditional jump or move depends on uninitialised value(s)
-==1535628==    at 0x499182D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1535628==    by 0x4991968: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1535628==    by 0x49A00E9: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1535628==    by 0x1092CE: testList() (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628==    by 0x109D19: main (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628== 
-==1535628== Conditional jump or move depends on uninitialised value(s)
-==1535628==    at 0x499199E: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1535628==    by 0x49A00E9: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1535628==    by 0x1092CE: testList() (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628==    by 0x109D19: main (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628== 
-==1535628== Conditional jump or move depends on uninitialised value(s)
-==1535628==    at 0x10933C: testList() (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628==    by 0x109D19: main (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628== 
-==1535628== 
-==1535628== Process terminating with default action of signal 6 (SIGABRT)
-==1535628==    at 0x4B43A7C: __pthread_kill_implementation (pthread_kill.c:44)
-==1535628==    by 0x4B43A7C: __pthread_kill_internal (pthread_kill.c:78)
-==1535628==    by 0x4B43A7C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
-==1535628==    by 0x4AEF475: raise (raise.c:26)
-==1535628==    by 0x4AD57F2: abort (abort.c:79)
-==1535628==    by 0x4AD571A: __assert_fail_base.cold (assert.c:92)
-==1535628==    by 0x4AE6E95: __assert_fail (assert.c:101)
-==1535628==    by 0x1093B9: testList() (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628==    by 0x109D19: main (in /home/ww202/ece551/091_tests_lls/test-lls)
-==1535628== 
-==1535628== HEAP SUMMARY:
-==1535628==     in use at exit: 73,776 bytes in 4 blocks
-==1535628==   total heap usage: 7 allocs, 3 frees, 74,440 bytes allocated
-==1535628== 
-==1535628== LEAK SUMMARY:
-==1535628==    definitely lost: 0 bytes in 0 blocks
-==1535628==    indirectly lost: 0 bytes in 0 blocks
-==1535628==      possibly lost: 0 bytes in 0 blocks
-==1535628==    still reachable: 73,776 bytes in 4 blocks
-==1535628==         suppressed: 0 bytes in 0 blocks
-==1535628== Reachable blocks (those to which a pointer was found) are not shown.
-==1535628== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==1535628== 
-==1535628== Use --track-origins=yes to see where uninitialised values come from
-==1535628== For lists of detected and suppressed errors, rerun with: -s
-==1535628== ERROR SUMMARY: 6 errors from 6 contexts (suppressed: 0 from 0)
+==1616762== Memcheck, a memory error detector
+==1616762== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1616762== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1616762== Command: ./test-lls
+==1616762== Parent PID: 1616760
+==1616762== 
+==1616762== 
+==1616762== Process terminating with default action of signal 6 (SIGABRT)
+==1616762==    at 0x4B43A7C: __pthread_kill_implementation (pthread_kill.c:44)
+==1616762==    by 0x4B43A7C: __pthread_kill_internal (pthread_kill.c:78)
+==1616762==    by 0x4B43A7C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==1616762==    by 0x4AEF475: raise (raise.c:26)
+==1616762==    by 0x4AD57F2: abort (abort.c:79)
+==1616762==    by 0x4AD571A: __assert_fail_base.cold (assert.c:92)
+==1616762==    by 0x4AE6E95: __assert_fail (assert.c:101)
+==1616762==    by 0x10A5BA: Tester::testRemove() (in /home/ww202/ece551/091_tests_lls/test-lls)
+==1616762==    by 0x109237: main (in /home/ww202/ece551/091_tests_lls/test-lls)
+==1616762== 
+==1616762== HEAP SUMMARY:
+==1616762==     in use at exit: 73,088 bytes in 17 blocks
+==1616762==   total heap usage: 38 allocs, 21 frees, 73,743 bytes allocated
+==1616762== 
+==1616762== LEAK SUMMARY:
+==1616762==    definitely lost: 0 bytes in 0 blocks
+==1616762==    indirectly lost: 0 bytes in 0 blocks
+==1616762==      possibly lost: 0 bytes in 0 blocks
+==1616762==    still reachable: 73,088 bytes in 17 blocks
+==1616762==         suppressed: 0 bytes in 0 blocks
+==1616762== Reachable blocks (those to which a pointer was found) are not shown.
+==1616762== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==1616762== 
+==1616762== For lists of detected and suppressed errors, rerun with: -s
+==1616762== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

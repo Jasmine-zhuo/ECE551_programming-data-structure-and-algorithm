@@ -1,21 +1,22 @@
-#ifndef _IL_H_
-#define _IL_H_
+#ifndef IL_HPP
+#define IL_HPP
 
 #include <cstdlib>
-void testList(void);
+
+class Tester;
+
 class IntList {
- private:
+ public:
   class Node {
    public:
     int data;
     Node * next;
     Node * prev;
     Node() : data(0), next(NULL), prev(NULL){};
-    Node(int d) : data(d), next(NULL), prev(NULL){};
+    Node(int d, Node * n, Node * p) : data(d), next(n), prev(p){};
   };
   Node * head;
   Node * tail;
-  int size;
 
  public:
   IntList();
@@ -29,7 +30,7 @@ class IntList {
   const int & operator[](int index) const;
   int find(const int & item);
   int getSize() const;
-  friend void testList(void);
+  friend Tester;
 };
 
 #endif
