@@ -1,6 +1,6 @@
-Grading at 12/24/2022:03:28:12.663949
-For commit ID 0417b7e4574a8e187657412bae97ef3703b510aa
-Grading at Fri Dec 23 10:28:10 PM EST 2022
+Grading at 12/24/2022:03:41:15.718649
+For commit ID 413e6571429d6815558d60806475b4046a2685c2
+Grading at Fri Dec 23 10:41:12 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -22,9 +22,8 @@ Valgrind was clean
 
 1.2: Current test is ./cyoa-step1 story2 < /dev/null
 -----------------------------
-You considered this a failure case:
-An error occured when opening a page file!
-But we did not.
+Your output looks good. Lets check valgrind
+Valgrind was clean
 No request to check for intermediate deadline completion on step 1
 
 Step 2
