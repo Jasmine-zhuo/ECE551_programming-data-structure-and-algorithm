@@ -30,11 +30,12 @@ int main(int argc, char ** argv) {
       std::ostringstream ss;
       std::ifstream curPage;
 
-      std::string path = std::string(argv[1]) + "/page" + pageNum_str + ".txt";
-      //std::cout << path << std::endl;
+      std::string path = std::string(argv[1]) + "/" +
+                         line.substr(at_index + 3, line.size() - at_index - 4);
       curPage.open(path.c_str());
       if (curPage.fail()) {
-        std::cerr << "An error occured when opening a page file!" << std::endl;
+        std::cerr << "An error occured when trying to open this file:" << path
+                  << std::endl;
         exit(EXIT_FAILURE);
       }
       ss << curPage.rdbuf();
