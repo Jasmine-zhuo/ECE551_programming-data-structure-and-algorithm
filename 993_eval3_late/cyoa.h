@@ -22,3 +22,6 @@ class story {
   std::vector<page *> totalStory;
   std::map<int, char> pageType;
 };
+story * readStory(char ** argv);
+void deleteStory(story * Story);
+void display(story * Story);

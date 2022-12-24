@@ -1,14 +1,5 @@
 #include "cyoa.h"
-
-int main(int argc, char ** argv) {
-  if (argc != 2) {
-    fprintf(stderr, "Wrong input number");
-  }
-  story * Story = readStory(argv);
-  display(Story);
-  deleteStory(Story);
-}
-/*
+story * readStory(char ** argv) {
   std::string line;
   std::string dir(argv[1]);
   dir += "/story.txt";
@@ -19,7 +10,7 @@ int main(int argc, char ** argv) {
     std::cerr << "An error occured when opening a story.txt file!" << std::endl;
     exit(EXIT_FAILURE);
   }
-  story Story;
+  story * Story = new story();
   while (std::getline(f, line)) {
     line += "\n";
     //std::cout << line;
@@ -44,9 +35,9 @@ int main(int argc, char ** argv) {
       }
       ss << curPage.rdbuf();
       p->text = ss.str();
-      Story.pageType[pageNum] = line[at_index + 1];
-      Story.totalStory.push_back(p);
-      if (size_t(p->num) != (Story.totalStory.size() - 1)) {
+      Story->pageType[pageNum] = line[at_index + 1];
+      Story->totalStory.push_back(p);
+      if (size_t(p->num) != (Story->totalStory.size() - 1)) {
         std::cerr << "Pages do not appear in order." << std::endl;
         exit(EXIT_FAILURE);
       }
@@ -59,18 +50,21 @@ int main(int argc, char ** argv) {
       int pageNum = std::atoi(pageNum_str.c_str());
       int choiceNum = std::atoi(choiceNum_str.c_str());
       std::string choice = line.substr(col_index_2 + 1);
-      Story.totalStory[pageNum]->choices[choiceNum] = choice;
-      Story.totalStory[pageNum]->choiceOrder.push_back(choiceNum);
+      Story->totalStory[pageNum]->choices[choiceNum] = choice;
+      Story->totalStory[pageNum]->choiceOrder.push_back(choiceNum);
     }
   }
   //for declaration line test
-  for (std::vector<page *>::iterator it = Story.totalStory.begin();
-       it != Story.totalStory.end();
+  return Story;
+}
+void display(story * Story) {
+  for (std::vector<page *>::iterator it = Story->totalStory.begin();
+       it != Story->totalStory.end();
        it++) {
     std::cout << "Page " << (*it)->num << std::endl;
     std::cout << "==========\n";
     std::cout << (*it)->text << std::endl;
-    if (Story.pageType[(*it)->num] == 'N') {
+    if (Story->pageType[(*it)->num] == 'N') {
       std::cout << "What would you like to do?" << std::endl << std::endl;
       int i = 1;
       for (std::vector<int>::iterator it1 = (*it)->choiceOrder.begin();
@@ -81,13 +75,20 @@ int main(int argc, char ** argv) {
         std::cout << (*it)->choices[*it1];
       }
     }
-    else if (Story.pageType[(*it)->num] == 'W') {
+    else if (Story->pageType[(*it)->num] == 'W') {
       std::cout << "Congratulations! You have won. Hooray!" << std::endl;
     }
-    else if (Story.pageType[(*it)->num] == 'L') {
+    else if (Story->pageType[(*it)->num] == 'L') {
       std::cout << "Sorry, you have lost. Better luck next time!" << std::endl;
     }
+  }
+}
+
+void deleteStory(story * Story) {
+  for (std::vector<page *>::iterator it = Story->totalStory.begin();
+       it != Story->totalStory.end();
+       it++) {
     delete (*it);
   }
-  */
-//end for declaration line test
+  delete Story;
+}
