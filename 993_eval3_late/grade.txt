@@ -1,0 +1,35 @@
+Grading at 12/24/2022:03:28:12.663949
+For commit ID 0417b7e4574a8e187657412bae97ef3703b510aa
+Grading at Fri Dec 23 10:28:10 PM EST 2022
+Doing some basic checking for your submission
+
+Step 1
+Checking that cyoa-step1 compiles
+rm cyoa-step1 *.cpp~ *.txt~ 
+g++ -Wall -Werror -pedantic -std=c++03 -o cyoa-step1 cyoa-step1.cpp
+The code compiled (good)
+Executable cyoa-step1 exists (good)
+------------------------------------
+Now running YOUR tests for step 1
+------------------------------------
+
+
+1.1: Current test is ./cyoa-step1 story1 < /dev/null
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+
+1.2: Current test is ./cyoa-step1 story2 < /dev/null
+-----------------------------
+You considered this a failure case:
+An error occured when opening a page file!
+But we did not.
+No request to check for intermediate deadline completion on step 1
+
+Step 2
+Checking that cyoa-step2 compiles
+rm cyoa-step1 *.cpp~ *.txt~ 
+The code did not compile!
+
+Overall Grade: NO GRADE YET
