@@ -50,6 +50,10 @@ story * readStory(char ** argv) {
       int pageNum = std::atoi(pageNum_str.c_str());
       int choiceNum = std::atoi(choiceNum_str.c_str());
       std::string choice = line.substr(col_index_2 + 1);
+      if (Story->pageType.find(pageNum) == Story->pageType.end()) {
+        std::cerr << "This page does not exist, cannot add choice pages!" << std::endl;
+        exit(EXIT_FAILURE);
+      }
       Story->totalStory[pageNum]->choices[choiceNum] = choice;
       Story->totalStory[pageNum]->choiceOrder.push_back(choiceNum);
     }
