@@ -1,11 +1,11 @@
 #include "cyoa.h"
-
 int main(int argc, char ** argv) {
   if (argc != 2) {
-    std::cerr << "Wrong input number" << std::endl;
-    exit(EXIT_FAILURE);
+    fprintf(stderr, "Wrong input number");
   }
   story * Story = readStory(argv);
-  display(Story);
+  checkStory(Story);
+  playStory(Story);
   deleteStory(Story);
+  return EXIT_SUCCESS;
 }

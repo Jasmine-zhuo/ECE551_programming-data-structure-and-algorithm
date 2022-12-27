@@ -1,5 +1,3 @@
-Page 0
-==========
 Welcome to choose your own adventure.
 Get ready for the thrilling tale of dragons and brunches.
 Will you get help from Grew and/or Denevieve?
@@ -10,10 +8,6 @@ Only you can decide....
 What would you like to do?
 
  1. I am ready for this story!
-cur_digit:1
-new sum:1
-Page 1
-==========
 One day, a strange old wizard comes to your village and tells you that
 there is an evil dragon lurking in the hills. This wizard's story explains
 why the village's goats and cows have been going missing lately.
@@ -38,10 +32,6 @@ What would you like to do?
  1. Choose the magic whistle.
  2. Choose the magic shoes.
  3. Choose the magic toaster.
-cur_digit:1
-new sum:1
-Page 2
-==========
 As you take the magic whistle from the wizard's hand, he disappears in a
 puff of smoke. You decide that you should give the whistle a try before you
 set off to deal with the dragon (after all, if you learned nothing else in
@@ -66,10 +56,6 @@ What would you like to do?
  1. Go to Denevieve for help.
  2. Go to Grew for help.
  3. Go alone.
-cur_digit:1
-new sum:1
-Page 5
-==========
 After thinking about it a bit, you decide that Denevieve is probably a
 better choice. After all, her singing skills are likely to come in handy,
 especially with your magic whistle. Maybe dragons can be tamed by choir
@@ -90,10 +76,7 @@ What would you like to do?
  1. Silent Night, accompanied by raven calls
  2. Angels We Have Heard on High, accompanied by roosters crowing
  3. Bohemian Rhapsody, accompanied by the magestic call of a bald eagle
-cur_digit:1
-new sum:1
-Page 14
-==========
+That is not a valid choice, please try again
 You take out your whistle and Denevieve starts to sing
 
 "Si--iii-lent niiight" (CAW CAW CAW)
