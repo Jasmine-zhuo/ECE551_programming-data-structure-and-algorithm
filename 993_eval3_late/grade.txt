@@ -1,6 +1,6 @@
-Grading at 12/27/2022:01:57:35.253567
-For commit ID 6c05ebef95d72b68f814c183a25145abafc0ccc1
-Grading at Mon Dec 26 08:57:16 PM EST 2022
+Grading at 12/27/2022:02:00:45.060956
+For commit ID c496a627dac59c84952d39874ae694e8b721b9bb
+Grading at Mon Dec 26 09:00:25 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -147,20 +147,25 @@ Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.4: Current test is ./cyoa-step2 story1  <  story1_input4.txt
------------------------------
-You considered this a failure case:
-/dev/fd/3: line 527: story1_input4.txt: No such file or directory
-But we did not.
-
-
-2.5: Current test is ./cyoa-step2 story2  <  story2_input1.txt
+2.4: Current test is ./cyoa-step2 story1  <  story1-input4.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.6: Current test is ./cyoa-step2 test-story2  <  story1_input1.txt
+2.5: Current test is ./cyoa-step2 story1  <  story1-input4.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+
+2.6: Current test is ./cyoa-step2 story2  <  story1_input2.txt
+-----------------------------
+We considered this a failure case.
+But you did not (exit status was EXIT_SUCCESS).
+
+
+2.7: Current test is ./cyoa-step2 test-story2  <  story1_input1.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -170,67 +175,67 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.7: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input0.txt
+2.8: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input0.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.8: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input1.txt
+2.9: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input1.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.9: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input2.txt
+2.10: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input2.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.10: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input3.txt
+2.11: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input3.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.11: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input4.txt
+2.12: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input4.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.12: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input5.txt
+2.13: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input5.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.13: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input6.txt
+2.14: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input6.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.14: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input7.txt
+2.15: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input7.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.15: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input8.txt
+2.16: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input8.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.16: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input9.txt
+2.17: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input9.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-2.17: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input10.txt
+2.18: Current test is ./cyoa-step2 story1  <  ./story1/inputs/input10.txt
 -----------------------------
 Your output looks good. Lets check valgrind
 Valgrind was clean
