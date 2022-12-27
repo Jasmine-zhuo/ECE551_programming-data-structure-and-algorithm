@@ -1,6 +1,6 @@
-Grading at 12/27/2022:02:32:19.221724
-For commit ID 61e2e555d2a5d86056178938a91d3bb7625f17dc
-Grading at Mon Dec 26 09:31:56 PM EST 2022
+Grading at 12/27/2022:02:37:21.402231
+For commit ID b6551dab913546a69dcd6585f78a701dc06790a7
+Grading at Mon Dec 26 09:36:59 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -71,7 +71,7 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Error! Page6is not a valid choice page
+An error occured when trying to open this file:test-story4/1.txt
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
