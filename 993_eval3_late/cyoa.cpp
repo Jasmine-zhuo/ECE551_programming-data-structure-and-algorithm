@@ -189,9 +189,9 @@ int toNum(std::string s) {
   if (i == s.size()) {  //s="(' ')*"
     return -1;
   }
-  if (s[i] == '0') {  //s = "(' ')*0"
-    return (i == s.size() - 1) ? 0 : -1;
-  }
+  //if (s[i] == '0') {  //s = "(' ')*0"
+  //return (i == s.size() - 1) ? 0 : -1;
+  //}
   int sum = 0;
   size_t j = 0;
   for (j = i; j < s.size(); j++) {
