@@ -1,8 +1,9 @@
 cyoa-step1 story1
 cyoa-step1 story2
 cyoa-step1 test-story1
-cyoa-step1 test-story2
+cyoa-step2 test-story2
 cyoa-step2 test-story3
+cyoa-step2 test-story4
 cyoa-step2 story1 < story1_input1.txt
 cyoa-step2 story1 < story1_input2.txt
 cyoa-step2 story1 < story1_input3.txt
