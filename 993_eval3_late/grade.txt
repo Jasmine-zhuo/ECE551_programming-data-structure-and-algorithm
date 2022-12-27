@@ -1,6 +1,6 @@
-Grading at 12/27/2022:01:25:27.319915
-For commit ID e15340e4d1d4243a801bc58729f63d5461895b5f
-Grading at Mon Dec 26 08:25:11 PM EST 2022
+Grading at 12/27/2022:01:28:24.278628
+For commit ID a4d639521207867da1cc5ffd8adecbf2f108ee38
+Grading at Mon Dec 26 08:28:07 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -62,9 +62,12 @@ Only you can decide....						Only you can decide....
 What would you like to do?					What would you like to do?
 
  1. I am ready for this story!					 1. I am ready for this story!
-That is not a valid choice, please try againThat is not a val |	That is not a valid choice, please try again
-							      >	That is not a valid choice, please try again
-							      >	One day, a strange old wizard comes to your village and tells
+That is not a valid choice, please try again			That is not a valid choice, please try again
+That is not a valid choice, please try again			That is not a valid choice, please try again
+That is not a valid choice, please try again		      <
+That is not a valid choice, please try again		      <
+That is not a valid choice, please try again		      <
+One day, a strange old wizard comes to your village and tells	One day, a strange old wizard comes to your village and tells
 there is an evil dragon lurking in the hills. This wizard's s	there is an evil dragon lurking in the hills. This wizard's s
 why the village's goats and cows have been going missing late	why the village's goats and cows have been going missing late
 
@@ -154,63 +157,8 @@ Your file did not match the expected output
 
 2.2: Current test is ./cyoa-step2 story2  <  story1_input2.txt
 -----------------------------
-It looks like you got different output from us on that case.
-Here is the diff (yours on left, ours on right):
-
-One bright weekend afternoon, you decide to adventure, puttin	One bright weekend afternoon, you decide to adventure, puttin
-of the Niebelungen and traveler's cloak and strapping the fam	of the Niebelungen and traveler's cloak and strapping the fam
-to your back.							to your back.
-
-Half-way up the mountain Matterhorn, you see a cave opening w	Half-way up the mountain Matterhorn, you see a cave opening w
-coming out. You enter the cave and tiptoe inside, straining y	coming out. You enter the cave and tiptoe inside, straining y
-the gloomy mist.						the gloomy mist.
-
-You encounter a dragon.						You encounter a dragon.
-
-What would you like to do?					What would you like to do?
-
- 1. Try to sneak past the sleeping dragon			 1. Try to sneak past the sleeping dragon
- 2. Leave the dragon's cave and go home				 2. Leave the dragon's cave and go home
- 3. Stab the dragon in the neck					 3. Stab the dragon in the neck
-That is not a valid choice, please try againThat is not a val |	That is not a valid choice, please try again
-							      >	That is not a valid choice, please try again
-							      >	That is not a valid choice, please try again
-							      >	That is not a valid choice, please try again
-							      >	As you tiptoe past the sleeping dragon, steam rising from her
-see a gleaming treasure hoard, just beyond the scaly tail.	see a gleaming treasure hoard, just beyond the scaly tail.
-
-An enormous, rare Scythian ruby gleams atop a pedestal, becko	An enormous, rare Scythian ruby gleams atop a pedestal, becko
-
-What would you like to do?					What would you like to do?
-
- 1. Pick up the ruby						 1. Pick up the ruby
- 2. Pass the ruby to explore the rest of the hoard		 2. Pass the ruby to explore the rest of the hoard
-A mountain of treasure rises before you, but two things are m	A mountain of treasure rises before you, but two things are m
-interesting than the sapphires and gold doubloons. To your ri	interesting than the sapphires and gold doubloons. To your ri
-unique and elegant coat stand, rests a silvery cloak. To your	unique and elegant coat stand, rests a silvery cloak. To your
-grand marble desk, lies an ancient book with gold-leaf trim. 	grand marble desk, lies an ancient book with gold-leaf trim. 
-
-What would you like to do?					What would you like to do?
-
- 1. Put on the cloak						 1. Put on the cloak
- 2. Open the book						 2. Open the book
-That is not a valid choice, please try againThe book is the o |	That is not a valid choice, please try again
-							      >	The book is the original copy of All of Programming. You pore
-contents, internalizing its every lesson.			contents, internalizing its every lesson.
-
-Equipped with its knowledge, you sneak back to where the drag	Equipped with its knowledge, you sneak back to where the drag
-sleeping. 							sleeping. 
-
-What would you like to do?					What would you like to do?
-
- 1. Exult in your skillset and go home				 1. Exult in your skillset and go home
- 2. Stab the dragon in the neck					 2. Stab the dragon in the neck
-Your famed sword Ice becomes embedded in the dragon's neck sc	Your famed sword Ice becomes embedded in the dragon's neck sc
-dragon rolls over, crushing you.				dragon rolls over, crushing you.
-
-Sorry, you have lost. Better luck next time!			Sorry, you have lost. Better luck next time!
-Your file did not match the expected output
-
+Your output looks good. Lets check valgrind
+Valgrind was clean
 
 
 2.3: Current test is ./cyoa-step2 test-story2  <  story1_input1.txt
