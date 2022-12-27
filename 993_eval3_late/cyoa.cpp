@@ -153,8 +153,8 @@ void checkStory(story * Story) {
 }
 void displayPage(story * Story, int pageNum) {
   page * Page = Story->totalStory[pageNum];
-  std::cout << "Page " << pageNum << std::endl;
-  std::cout << "==========\n";
+  //  std::cout << "Page " << pageNum << std::endl;
+  //std::cout << "==========\n";
   std::cout << Page->text << std::endl;
   if (Story->pageType[pageNum] == 'N') {
     std::cout << "What would you like to do?" << std::endl << std::endl;
