@@ -214,7 +214,7 @@ void playStory(story * Story) {
     int num = toNum(in_str);
     if (num == 0 || num == -1 ||
         (size_t)num > Story->totalStory[cur_pageNUM]->choiceOrder.size()) {
-      std::cout << "That is not a valid choice, please try again";
+      std::cout << "That is not a valid choice, please try again\n";
       continue;
     }
     cur_pageNUM = Story->totalStory[cur_pageNUM]->choiceOrder[num - 1];
