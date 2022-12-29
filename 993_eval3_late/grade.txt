@@ -1,11 +1,11 @@
-Grading at 12/27/2022:02:41:24.051950
-For commit ID 44426cfa5bcd7dac9536eb505d967222a2042ec0
-Grading at Mon Dec 26 09:41:01 PM EST 2022
+Grading at 12/29/2022:04:09:00.328198
+For commit ID 62d8f871a5a31cd3d1fe5448e30c3675956a1d24
+Grading at Wed Dec 28 11:08:36 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
 Checking that cyoa-step1 compiles
-rm cyoa-step1 cyoa-step2 *.cpp~ *.txt~ 
+rm cyoa-step1 cyoa-step2 cyoa-step3 *.cpp~ *.txt~ 
 g++ -Wall -Werror -pedantic -std=c++03 -o cyoa-step1 cyoa-step1.cpp cyoa.cpp
 The code compiled (good)
 Executable cyoa-step1 exists (good)
@@ -38,7 +38,7 @@ No request to check for intermediate deadline completion on step 1
 
 Step 2
 Checking that cyoa-step2 compiles
-rm cyoa-step1 cyoa-step2 *.cpp~ *.txt~ 
+rm cyoa-step1 cyoa-step2 cyoa-step3 *.cpp~ *.txt~ 
 g++ -Wall -Werror -pedantic -std=c++03 -o cyoa-step2 cyoa-step2.cpp cyoa.cpp
 The code compiled (good)
 Executable cyoa-step2 exists (good)
@@ -273,7 +273,18 @@ No request to check for intermediate deadline completion on step 2
 
 Step 3
 Checking that cyoa-step3 compiles
-rm cyoa-step1 cyoa-step2 *.cpp~ *.txt~ 
+rm cyoa-step1 cyoa-step2 cyoa-step3 *.cpp~ *.txt~ 
+g++ -Wall -Werror -pedantic -std=c++03 -o cyoa-step3 cyoa-step3.cpp cyoa.cpp
+The code compiled (good)
+Executable cyoa-step3 exists (good)
+------------------------------------
+Now running YOUR tests for step 3
+------------------------------------
+No request to check for intermediate deadline completion on step 3
+
+Step 4
+Checking that cyoa-step4 compiles
+rm cyoa-step1 cyoa-step2 cyoa-step3 *.cpp~ *.txt~ 
 The code did not compile!
 
 Overall Grade: NO GRADE YET
