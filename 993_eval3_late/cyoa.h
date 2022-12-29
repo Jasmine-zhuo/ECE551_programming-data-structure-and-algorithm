@@ -5,9 +5,11 @@
 #include <fstream>
 #include <iostream>
 #include <map>
+#include <queue>
 #include <set>
 #include <sstream>
 #include <string>
+#include <utility>
 #include <vector>
 class page {
  public:
@@ -15,6 +17,7 @@ class page {
   std::string text;
   std::map<int, std::string> choices;
   std::vector<int> choiceOrder;
+  std::map<int, int> pageChoice;
   page(int x) : num(x) {}
 };
 
@@ -34,3 +37,4 @@ void checkStory(story * Story);
 void playStory(story * Story);
 void displayPage(story * Story, int pageNum);
 int toNum(std::string s);
+void winWay(story * Story);

@@ -1,0 +1,25 @@
+0@N:page0.txt
+0:1:book
+1@N:page1.txt
+1:2:Choose the magic whistle.
+2@N:page2.txt
+2:3:Go to Denevieve for help.
+3@N:page3.txt
+3:4:Go alone.
+4@N:page4.txt
+4:5:Go to Denevieve for help.
+4:2:Go alone.
+5@N:page5.txt
+5:6:Silent Night, accompanied by raven calls
+5:8:Angels We Have Heard on High, accompanied by roosters crowing
+6@N:page6.txt
+6:3:Hello.
+7@W:page7.txt
+8@N:page8.txt
+9@N:page9.txt
+9:7:1
+9:10:water
+10@L:page10.txt
+11@N:page11.txt
+11:9:fs
+9:11:dg

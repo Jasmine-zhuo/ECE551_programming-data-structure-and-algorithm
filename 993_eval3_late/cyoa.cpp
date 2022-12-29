@@ -63,6 +63,8 @@ story * readStory(char ** argv) {
       }
       Story->totalStory[pageNum]->choices[choiceNum] = choice;
       Story->totalStory[pageNum]->choiceOrder.push_back(choiceNum);
+      Story->totalStory[pageNum]->pageChoice[choiceNum] =
+          Story->totalStory[pageNum]->choiceOrder.size();  //map(page number,choice order)
       Story->choicePage.insert(choiceNum);
     }
   }
@@ -219,5 +221,48 @@ void playStory(story * Story) {
     }
     cur_pageNUM = Story->totalStory[cur_pageNUM]->choiceOrder[num - 1];
     displayPage(Story, cur_pageNUM);
+  }
+}
+typedef std::pair<int, std::vector<int> > myPair;
+void winWay(story * Story) {
+  std::queue<std::pair<int, std::vector<int> > > BFS_q;
+  std::vector<std::vector<int> > ans;
+  myPair p = make_pair(0, std::vector<int>());
+  BFS_q.push(p);
+  while (!BFS_q.empty()) {
+    myPair cur = BFS_q.front();
+    cur.second.push_back(cur.first);
+    BFS_q.pop();
+    if (Story->pageType[cur.first] == 'W') {
+      ans.push_back(cur.second);
+      continue;
+    }
+    page * curPage = Story->totalStory[cur.first];
+    for (size_t i = 0; i < curPage->choiceOrder.size(); i++) {
+      int nextPageNum = curPage->choiceOrder[i];
+      size_t j;
+      for (j = 0; j < cur.second.size(); j++) {
+        if (cur.second[j] == nextPageNum)
+          break;
+      }
+      if (j == cur.second.size()) {
+        myPair next = make_pair(nextPageNum, cur.second);
+        BFS_q.push(next);
+      }
+    }
+  }
+  if (!ans.empty()) {
+    for (size_t k = 0; k < ans.size(); k++) {
+      for (size_t m = 0; m < ans[k].size() - 1; m++) {
+        std::cout << ans[k][m] << "("
+                  << Story->totalStory[ans[k][m]]->pageChoice[ans[k][m + 1]] << "),";
+      }
+      std::cout << ans[k][ans[k].size() - 1];
+
+      std::cout << "(win)" << std::endl;
+    }
+  }
+  else {
+    std::cout << "This story is unwinnable!" << std::endl;
   }
 }
