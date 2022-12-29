@@ -1,6 +1,6 @@
-Grading at 12/29/2022:04:15:28.432767
-For commit ID 9b5274c2e435ba69cc3f7e8cb4e869394e9cc6b6
-Grading at Wed Dec 28 11:15:00 PM EST 2022
+Grading at 12/29/2022:04:17:46.836360
+For commit ID 377a7a22924ce3874931d5e38de36846c6e233ec
+Grading at Wed Dec 28 11:17:18 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -285,125 +285,25 @@ Now running YOUR tests for step 3
 3.1: Current test is ./cyoa-step3 story1 < /dev/null
 -----------------------------
 Your output looks good. Lets check valgrind
-Valgrind reported errors or memory leaks:
-==2351648== Memcheck, a memory error detector
-==2351648== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2351648== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2351648== Command: ./cyoa-step3 story1
-==2351648== Parent PID: 2351647
-==2351648== 
-==2351648== 
-==2351648== HEAP SUMMARY:
-==2351648==     in use at exit: 17,571 bytes in 112 blocks
-==2351648==   total heap usage: 327 allocs, 215 frees, 274,740 bytes allocated
-==2351648== 
-==2351648== 17,571 (128 direct, 17,443 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 10
-==2351648==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2351648==    by 0x10A9A7: readStory(char**) (in /home/ece551db/graderbase/work/ww202.993_eval3_late.U5SEw6/cyoa-step3)
-==2351648==    by 0x10A7F0: main (in /home/ece551db/graderbase/work/ww202.993_eval3_late.U5SEw6/cyoa-step3)
-==2351648== 
-==2351648== LEAK SUMMARY:
-==2351648==    definitely lost: 128 bytes in 1 blocks
-==2351648==    indirectly lost: 17,443 bytes in 111 blocks
-==2351648==      possibly lost: 0 bytes in 0 blocks
-==2351648==    still reachable: 0 bytes in 0 blocks
-==2351648==         suppressed: 0 bytes in 0 blocks
-==2351648== 
-==2351648== For lists of detected and suppressed errors, rerun with: -s
-==2351648== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+Valgrind was clean
 
 
 3.2: Current test is ./cyoa-step3 story2 < /dev/null
 -----------------------------
 Your output looks good. Lets check valgrind
-Valgrind reported errors or memory leaks:
-==2351679== Memcheck, a memory error detector
-==2351679== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2351679== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2351679== Command: ./cyoa-step3 story2
-==2351679== Parent PID: 2351678
-==2351679== 
-==2351679== 
-==2351679== HEAP SUMMARY:
-==2351679==     in use at exit: 7,664 bytes in 93 blocks
-==2351679==   total heap usage: 256 allocs, 163 frees, 209,075 bytes allocated
-==2351679== 
-==2351679== 7,664 (128 direct, 7,536 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 10
-==2351679==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2351679==    by 0x10A9A7: readStory(char**) (in /home/ece551db/graderbase/work/ww202.993_eval3_late.U5SEw6/cyoa-step3)
-==2351679==    by 0x10A7F0: main (in /home/ece551db/graderbase/work/ww202.993_eval3_late.U5SEw6/cyoa-step3)
-==2351679== 
-==2351679== LEAK SUMMARY:
-==2351679==    definitely lost: 128 bytes in 1 blocks
-==2351679==    indirectly lost: 7,536 bytes in 92 blocks
-==2351679==      possibly lost: 0 bytes in 0 blocks
-==2351679==    still reachable: 0 bytes in 0 blocks
-==2351679==         suppressed: 0 bytes in 0 blocks
-==2351679== 
-==2351679== For lists of detected and suppressed errors, rerun with: -s
-==2351679== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+Valgrind was clean
 
 
 3.3: Current test is ./cyoa-step3 test-story5 < /dev/null
 -----------------------------
 Your output looks good. Lets check valgrind
-Valgrind reported errors or memory leaks:
-==2351709== Memcheck, a memory error detector
-==2351709== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2351709== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2351709== Command: ./cyoa-step3 test-story5
-==2351709== Parent PID: 2351708
-==2351709== 
-==2351709== 
-==2351709== HEAP SUMMARY:
-==2351709==     in use at exit: 12,762 bytes in 85 blocks
-==2351709==   total heap usage: 236 allocs, 151 frees, 223,274 bytes allocated
-==2351709== 
-==2351709== 12,762 (128 direct, 12,634 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 10
-==2351709==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2351709==    by 0x10A9A7: readStory(char**) (in /home/ece551db/graderbase/work/ww202.993_eval3_late.U5SEw6/cyoa-step3)
-==2351709==    by 0x10A7F0: main (in /home/ece551db/graderbase/work/ww202.993_eval3_late.U5SEw6/cyoa-step3)
-==2351709== 
-==2351709== LEAK SUMMARY:
-==2351709==    definitely lost: 128 bytes in 1 blocks
-==2351709==    indirectly lost: 12,634 bytes in 84 blocks
-==2351709==      possibly lost: 0 bytes in 0 blocks
-==2351709==    still reachable: 0 bytes in 0 blocks
-==2351709==         suppressed: 0 bytes in 0 blocks
-==2351709== 
-==2351709== For lists of detected and suppressed errors, rerun with: -s
-==2351709== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+Valgrind was clean
 
 
 3.4: Current test is ./cyoa-step3 test-story6 < /dev/null
 -----------------------------
 Your output looks good. Lets check valgrind
-Valgrind reported errors or memory leaks:
-==2351739== Memcheck, a memory error detector
-==2351739== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==2351739== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==2351739== Command: ./cyoa-step3 test-story6
-==2351739== Parent PID: 2351738
-==2351739== 
-==2351739== 
-==2351739== HEAP SUMMARY:
-==2351739==     in use at exit: 14,341 bytes in 89 blocks
-==2351739==   total heap usage: 222 allocs, 133 frees, 237,582 bytes allocated
-==2351739== 
-==2351739== 14,341 (128 direct, 14,213 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 10
-==2351739==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==2351739==    by 0x10A9A7: readStory(char**) (in /home/ece551db/graderbase/work/ww202.993_eval3_late.U5SEw6/cyoa-step3)
-==2351739==    by 0x10A7F0: main (in /home/ece551db/graderbase/work/ww202.993_eval3_late.U5SEw6/cyoa-step3)
-==2351739== 
-==2351739== LEAK SUMMARY:
-==2351739==    definitely lost: 128 bytes in 1 blocks
-==2351739==    indirectly lost: 14,213 bytes in 88 blocks
-==2351739==      possibly lost: 0 bytes in 0 blocks
-==2351739==    still reachable: 0 bytes in 0 blocks
-==2351739==         suppressed: 0 bytes in 0 blocks
-==2351739== 
-==2351739== For lists of detected and suppressed errors, rerun with: -s
-==2351739== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+Valgrind was clean
 No request to check for intermediate deadline completion on step 3
 
 Step 4
