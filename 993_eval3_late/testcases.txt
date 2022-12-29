@@ -22,3 +22,7 @@ cyoa-step2 story1 < ./story1/inputs/input7.txt
 cyoa-step2 story1 < ./story1/inputs/input8.txt
 cyoa-step2 story1 < ./story1/inputs/input9.txt
 cyoa-step2 story1 < ./story1/inputs/input10.txt
+cyoa-step3 story1
+cyoa-step3 story2
+cyoa-step3 test-story5
+cyoa-step3 test-story6
