@@ -6,5 +6,6 @@ int main(int argc, char ** argv) {
   story * Story = readStory(argv);
   checkStory(Story);
   winWay(Story);
+  deleteStory(Story);
   return EXIT_SUCCESS;
 }
