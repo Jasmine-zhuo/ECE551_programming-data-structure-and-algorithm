@@ -47,4 +47,3 @@ void winWay(story * Story);             //find cycle-free way to win in step3
 story * readStory_step4(char ** argv);  //read story by line and store info in step4
 void playStory_step4(story * Story);    //display story in step4
 void displayPage_step4(story * Story, int pageNum);  //display certain page used in step4
-std::string int2str(int x);                          //convert an int to string

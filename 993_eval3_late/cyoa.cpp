@@ -441,24 +441,18 @@ void displayPage_step4(story * Story, int pageNum) {  //display certain page use
         int curValue = Page->Condition[*it1].second;
         if (Story->variables[curVar] == curValue) {  //condition met
           Page->allCondition[(*it1)] = true;
-          // Page->choicePrompt += " " + int2str(i) + ". " + Page->choices[*it1];
-
           std::cout << ' ' << i << ". ";
           std::cout << Page->choices[*it1];
           i++;
         }
         else {
           Page->allCondition[(*it1)] = false;
-          //Page->choicePrompt += " " + int2str(i) + ". " + "<UNAVAILABLE>\n";
-
           std::cout << ' ' << i << ". ";
           std::cout << "<UNAVAILABLE>" << std::endl;
           i++;
         }
       }
       else {  //not a conditional choice
-        //Page->choicePrompt += " " + int2str(i) + ". " + Page->choices[*it1];
-
         std::cout << ' ' << i << ". ";
         std::cout << Page->choices[*it1];
         i++;
@@ -475,9 +469,4 @@ void displayPage_step4(story * Story, int pageNum) {  //display certain page use
     deleteStory(Story);
     exit(EXIT_SUCCESS);
   }
-}
-std::string int2str(int x) {
-  std::stringstream ss;
-  ss << x;
-  return ss.str();
 }
