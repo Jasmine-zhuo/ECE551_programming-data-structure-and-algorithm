@@ -26,3 +26,4 @@ cyoa-step3 story1
 cyoa-step3 story2
 cyoa-step3 test-story5
 cyoa-step3 test-story6
+cyoa-step4 story3
