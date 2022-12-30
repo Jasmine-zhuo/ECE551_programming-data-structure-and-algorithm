@@ -426,8 +426,9 @@ void playStory_step4(story * Story) {
     if (curPage->allCondition.find(nextPageNum) != curPage->allCondition.end() &&
         curPage->allCondition[nextPageNum] ==
             false) {  //choice is conditional and condition not met
-      std::cout << "Sorry, unavailable choice,please select again" << std::endl;
-      std::cout << curPage->choicePrompt;
+      std::cout << "That choice is not available at this time, please try again"
+                << std::endl;
+      //std::cout << curPage->choicePrompt;
       //display this page and the choices again
       continue;
     }
