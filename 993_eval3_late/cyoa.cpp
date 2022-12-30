@@ -274,7 +274,6 @@ story * readStory_step4(char ** argv) {
   std::string line;
   std::string dir(argv[1]);
   dir += "/story.txt";
-  //FILE * f = fopen(dir.c_str(), "r");
   std::ifstream f;
   f.open(dir.c_str());
   if (f.fail()) {
@@ -400,20 +399,6 @@ void playStory_step4(story * Story) {
   int cur_pageNUM = 0;
 
   while (std::cin >> in_str) {
-    /**TEST ONLY BEGINS**/
-    /*****************************/
-    /*
-    std::cout << std::endl << "****************************" << std::endl;
-    for (std::map<std::string, int>::iterator it = Story->variables.begin();
-         it != Story->variables.end();
-         it++) {
-      std::cout << it->first << "is now:" << it->second << std::endl;
-    }
-    std::cout << std::endl << "****************************" << std::endl;
-    */
-    /****************************/
-    /**TEST ONLY ENDS**/
-
     int num = toNum(in_str);
     if (num == 0 || num == -1 ||
         (size_t)num > Story->totalStory[cur_pageNUM]->choiceOrder.size()) {
@@ -428,8 +413,6 @@ void playStory_step4(story * Story) {
             false) {  //choice is conditional and condition not met
       std::cout << "That choice is not available at this time, please try again"
                 << std::endl;
-      //std::cout << curPage->choicePrompt;
-      //display this page and the choices again
       continue;
     }
 
@@ -458,19 +441,15 @@ void displayPage_step4(story * Story, int pageNum) {  //display certain page use
         int curValue = Page->Condition[*it1].second;
         if (Story->variables[curVar] == curValue) {  //condition met
           Page->allCondition[(*it1)] = true;
-          Page->choicePrompt += " " + int2str(i) + ". " + Page->choices[*it1];
+          // Page->choicePrompt += " " + int2str(i) + ". " + Page->choices[*it1];
 
           std::cout << ' ' << i << ". ";
           std::cout << Page->choices[*it1];
           i++;
         }
-        else {  //condition not met
-                /***********FOR TEST ONLY BEGINS***/
-                //std::cout << "This choice requires the variable " << curVar << "to be "
-          // << curValue << ", but it is now " << Story->variables[curVar] << std::endl;
-          /***********FOR TEST ONLY ENDS****/
+        else {
           Page->allCondition[(*it1)] = false;
-          Page->choicePrompt += " " + int2str(i) + ". " + "<UNAVAILABLE>\n";
+          //Page->choicePrompt += " " + int2str(i) + ". " + "<UNAVAILABLE>\n";
 
           std::cout << ' ' << i << ". ";
           std::cout << "<UNAVAILABLE>" << std::endl;
@@ -478,7 +457,7 @@ void displayPage_step4(story * Story, int pageNum) {  //display certain page use
         }
       }
       else {  //not a conditional choice
-        Page->choicePrompt += " " + int2str(i) + ". " + Page->choices[*it1];
+        //Page->choicePrompt += " " + int2str(i) + ". " + Page->choices[*it1];
 
         std::cout << ' ' << i << ". ";
         std::cout << Page->choices[*it1];

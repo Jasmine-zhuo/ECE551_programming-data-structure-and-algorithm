@@ -18,21 +18,20 @@ class page {
   std::map<int, std::string> choices;  //next page number and corresponding choice string
   std::vector<int> choiceOrder;        //next page numbers
   std::map<int, int> pageChoice;       //next page number and choice number
-  std::map<std::string, int> setVar;
-  std::map<int, std::pair<std::string, int> > Condition;
-  std::map<int, bool> allCondition;
-  std::string choicePrompt;
+  std::map<std::string, int> setVar;   //set variable value
+  std::map<int, std::pair<std::string, int> > Condition;  //nextpage,<variable,value>
+  std::map<int, bool> allCondition;  //<nextpage,if the condition is met>
   page(int x) : num(x) {}
 };
 
 class story {
  public:
-  std::vector<page *> totalStory;  //all pages in story
-  std::map<int, char> pageType;    //page number and page type
-  std::set<int> choicePage;        //next possible pages
-  int winNum;                      //win page number
-  int loseNum;                     //lose page number
-  std::map<std::string, int> variables;
+  std::vector<page *> totalStory;        //all pages in story
+  std::map<int, char> pageType;          //page number and page type
+  std::set<int> choicePage;              //next possible pages
+  int winNum;                            //win page number
+  int loseNum;                           //lose page number
+  std::map<std::string, int> variables;  //all <variable, value> in story
 
   story(int x = 0, int y = 0) : winNum(x), loseNum(y) {}
 };
@@ -44,8 +43,8 @@ void playStory(story * Story);                 //play story in step2
 void displayPage(story * Story, int pageNum);  //display certain page used in step2
 int toNum(
     std::string s);  //make sure valid input choice and convert string to number in step2
-void winWay(story * Story);  //find cycle-free way to win in step3
-story * readStory_step4(char ** argv);
-void playStory_step4(story * Story);
-void displayPage_step4(story * Story, int pageNum);
-std::string int2str(int x);
+void winWay(story * Story);             //find cycle-free way to win in step3
+story * readStory_step4(char ** argv);  //read story by line and store info in step4
+void playStory_step4(story * Story);    //display story in step4
+void displayPage_step4(story * Story, int pageNum);  //display certain page used in step4
+std::string int2str(int x);                          //convert an int to string
