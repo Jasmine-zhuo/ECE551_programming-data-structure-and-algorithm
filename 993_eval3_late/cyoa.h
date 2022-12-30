@@ -20,6 +20,8 @@ class page {
   std::map<int, int> pageChoice;       //next page number and choice number
   std::map<std::string, int> setVar;
   std::map<int, std::pair<std::string, int> > Condition;
+  std::map<int, bool> allCondition;
+  std::string choicePrompt;
   page(int x) : num(x) {}
 };
 
@@ -31,6 +33,7 @@ class story {
   int winNum;                      //win page number
   int loseNum;                     //lose page number
   std::map<std::string, int> variables;
+
   story(int x = 0, int y = 0) : winNum(x), loseNum(y) {}
 };
 story * readStory(char ** argv);  //read story by line and store info
@@ -45,3 +48,4 @@ void winWay(story * Story);  //find cycle-free way to win in step3
 story * readStory_step4(char ** argv);
 void playStory_step4(story * Story);
 void displayPage_step4(story * Story, int pageNum);
+std::string int2str(int x);

@@ -324,7 +324,7 @@ story * readStory_step4(char ** argv) {
         exit(EXIT_FAILURE);
       }
     }
-    else if (dollar_index != std::string::npos) {
+    else if (dollar_index != std::string::npos) {  //set variables
       std::string pageNum_str = line.substr(0, dollar_index);
       int pageNum = std::atoi(pageNum_str.c_str());
       size_t equal_index = line.find('=');
@@ -340,7 +340,7 @@ story * readStory_step4(char ** argv) {
       Story->variables[var] = 0;
       Story->totalStory[pageNum]->setVar[var] = value;
     }
-    else if (bracket_index_1 != std::string::npos) {
+    else if (bracket_index_1 != std::string::npos) {  //conditional choice lines
       std::string pageNum_str = line.substr(0, bracket_index_1);
       int pageNum = std::atoi(pageNum_str.c_str());
       size_t bracket_index_2 = line.find(']');
@@ -349,7 +349,7 @@ story * readStory_step4(char ** argv) {
       std::string value_str = line.substr(equal_index + 1, bracket_index_2);
       int value = std::atoi(value_str.c_str());
       size_t col_index_1 = line.find(':');
-      size_t col_index_2 = line.find(':', col_index_1);
+      size_t col_index_2 = line.find(':', col_index_1 + 1);
       std::string choiceNum_str = line.substr(col_index_1 + 1, col_index_2);
       int choiceNum = std::atoi(choiceNum_str.c_str());
       std::string choice = line.substr(col_index_2 + 1);
@@ -365,6 +365,7 @@ story * readStory_step4(char ** argv) {
       Story->choicePage.insert(choiceNum);
       std::pair<std::string, int> curVar = std::make_pair(choice, value);
       Story->totalStory[pageNum]->Condition[choiceNum] = curVar;
+      Story->totalStory[pageNum]->allCondition[choiceNum] = false;
     }
     else {  //choice lines
       size_t col_index_1 = line.find(':');
@@ -392,8 +393,9 @@ story * readStory_step4(char ** argv) {
 }
 void playStory_step4(story * Story) {
   std::string in_str;
-  displayPage(Story, 0);
+  displayPage_step4(Story, 0);
   int cur_pageNUM = 0;
+
   while (std::cin >> in_str) {
     int num = toNum(in_str);
     if (num == 0 || num == -1 ||
@@ -402,19 +404,29 @@ void playStory_step4(story * Story) {
       continue;
     }
 
-    for (std::map<std::string, int>::iterator it =
-             Story->totalStory[cur_pageNUM]->setVar.begin();
-         it != Story->totalStory[cur_pageNUM]->setVar.end();
-         it++) {
-      Story->variables[(*it).first] = (*it).second;
+    page * curPage = Story->totalStory[cur_pageNUM];
+    int nextPageNum = curPage->choiceOrder[num - 1];
+    if (curPage->allCondition.find(nextPageNum) != curPage->allCondition.end() &&
+        curPage->allCondition[nextPageNum] ==
+            false) {  //choice is conditional and condition not met
+      std::cout << "Sorry, unavailable choice,please select again" << std::endl;
+      std::cout << curPage->choicePrompt;
+      //display this page and the choices again
+      continue;
     }
 
-    cur_pageNUM = Story->totalStory[cur_pageNUM]->choiceOrder[num - 1];
+    cur_pageNUM = nextPageNum;
     displayPage_step4(Story, cur_pageNUM);
   }
 }
 void displayPage_step4(story * Story, int pageNum) {  //display certain page used in step2
   page * Page = Story->totalStory[pageNum];
+  for (std::map<std::string, int>::iterator it =
+           Story->totalStory[pageNum]->setVar.begin();
+       it != Story->totalStory[pageNum]->setVar.end();
+       it++) {  //set variables value for each page
+    Story->variables[(*it).first] = (*it).second;
+  }
   std::cout << Page->text << std::endl;
   if (Story->pageType[pageNum] == 'N') {
     std::cout << "What would you like to do?" << std::endl << std::endl;
@@ -426,21 +438,29 @@ void displayPage_step4(story * Story, int pageNum) {  //display certain page use
       if (Page->Condition.find(*it1) != Page->Condition.end()) {
         std::string curVar = Page->Condition[*it1].first;
         int curValue = Page->Condition[*it1].second;
-        if (Story->variables[curVar] == curValue) {
+        if (Story->variables[curVar] == curValue) {  //condition met
+          Page->allCondition[(*it1)] = true;
+          Page->choicePrompt += " " + int2str(i) + ". " + Page->choices[*it1];
+
           std::cout << ' ' << i << ". ";
-          i++;
           std::cout << Page->choices[*it1];
-        }
-        else {
-          std::cout << ' ' << i << ". ";
           i++;
+        }
+        else {  //condition not met
+          Page->allCondition[(*it1)] = false;
+          Page->choicePrompt += " " + int2str(i) + ". " + "<UNAVAILABLE>\n";
+
+          std::cout << ' ' << i << ". ";
           std::cout << "<UNAVAILABLE>" << std::endl;
+          i++;
         }
       }
-      else {
+      else {  //not a conditional choice
+        Page->choicePrompt += " " + int2str(i) + ". " + Page->choices[*it1];
+
         std::cout << ' ' << i << ". ";
-        i++;
         std::cout << Page->choices[*it1];
+        i++;
       }
     }
   }
@@ -454,4 +474,9 @@ void displayPage_step4(story * Story, int pageNum) {  //display certain page use
     deleteStory(Story);
     exit(EXIT_SUCCESS);
   }
+}
+std::string int2str(int x) {
+  std::stringstream ss;
+  ss << x;
+  return ss.str();
 }
