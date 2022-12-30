@@ -1,11 +1,11 @@
-Grading at 12/29/2022:04:17:46.836360
-For commit ID 377a7a22924ce3874931d5e38de36846c6e233ec
-Grading at Wed Dec 28 11:17:18 PM EST 2022
+Grading at 12/30/2022:03:15:03.196695
+For commit ID ccf4fd7d4ed6ce12a7823db6009ae76259fe8eac
+Grading at Thu Dec 29 10:14:33 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
 Checking that cyoa-step1 compiles
-rm cyoa-step1 cyoa-step2 cyoa-step3 *.cpp~ *.txt~ 
+rm cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4 *.cpp~ *.txt~ 
 g++ -Wall -Werror -pedantic -std=c++03 -o cyoa-step1 cyoa-step1.cpp cyoa.cpp
 The code compiled (good)
 Executable cyoa-step1 exists (good)
@@ -38,7 +38,7 @@ No request to check for intermediate deadline completion on step 1
 
 Step 2
 Checking that cyoa-step2 compiles
-rm cyoa-step1 cyoa-step2 cyoa-step3 *.cpp~ *.txt~ 
+rm cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4 *.cpp~ *.txt~ 
 g++ -Wall -Werror -pedantic -std=c++03 -o cyoa-step2 cyoa-step2.cpp cyoa.cpp
 The code compiled (good)
 Executable cyoa-step2 exists (good)
@@ -273,7 +273,7 @@ No request to check for intermediate deadline completion on step 2
 
 Step 3
 Checking that cyoa-step3 compiles
-rm cyoa-step1 cyoa-step2 cyoa-step3 *.cpp~ *.txt~ 
+rm cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4 *.cpp~ *.txt~ 
 g++ -Wall -Werror -pedantic -std=c++03 -o cyoa-step3 cyoa-step3.cpp cyoa.cpp
 The code compiled (good)
 Executable cyoa-step3 exists (good)
@@ -308,7 +308,23 @@ No request to check for intermediate deadline completion on step 3
 
 Step 4
 Checking that cyoa-step4 compiles
-rm cyoa-step1 cyoa-step2 cyoa-step3 *.cpp~ *.txt~ 
-The code did not compile!
+rm cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4 *.cpp~ *.txt~ 
+g++ -Wall -Werror -pedantic -std=c++03 -o cyoa-step4 cyoa-step4.cpp cyoa.cpp
+The code compiled (good)
+Executable cyoa-step4 exists (good)
+------------------------------------
+Now running YOUR tests for step 4
+------------------------------------
+
+
+4.1: Current test is ./cyoa-step4 story3 < /dev/null
+-----------------------------
+We considered this a failure case.
+But you did not (exit status was EXIT_SUCCESS).
+No request to check for intermediate deadline completion on step 4
+
+You have NOT passed your test cases!
+You should go and figure out/understand where thing went wrong
+And fix the problem(s) before the deadline
 
 Overall Grade: NO GRADE YET
